@@ -1,0 +1,2690 @@
+ CABLAGE G05 V8
+     AB EU
+
+G05 2 MODULES
+Sommaire
+CHAPITRE 1 Indications de base
+CHAPITRE 2 Préparation du Frame
+CHAPITRE 3 Montage support ASi dans module
+CHAPITRE 4 Montage de l’équerre d’alimentation 230VAC
+CHAPITRE 5 Montage de la lampe
+CHAPITRE 6 Montage / raccordement support pneumatique sur la face avant
+CHAPITRE 7 Emplacement étiquettes laser
+CHAPITRE 8 Montage du switch principal et filtre d’entrée
+CHAPITRE 9 Câblage des terres du Frame
+CHAPITRE 10 Descente de câble montant gauche
+CHAPITRE 11 Câblage armoire +A3 MASTER
+CHAPITRE 12 Câblage armoire +A4 SLAVE
+CHAPITRE 13 Câblage système d’air
+
+
+
+
+     V1.0                              Câblage G05 MOOS                   2
+Sommaire
+CHAPITRE 14 Câblage ASi et lampe dans armoire A2 CMD
+CHAPITRE 15 Montage / passage de câble HMI
+CHAPITRE 16 Câblage HMI
+CHAPITRE 18 Câblage sécurité de porte avant
+CHAPITRE 19 Câblage capteur d’entrée palette (Uniquement palette V6)
+CHAPITRE 20 Câblage ASi vanne Festo (Uniquement palette V6)
+CHAPITRE 21 Montage plaque armoire A2 Commande (Spécifique projet)
+CHAPITRE 22 Montage / câblage éléments de sécurité
+CHAPITRE 23 Documentation
+CHAPITRE 24 Test électrique avant mise en service
+CHAPITRE 25 Préparation pour mise en service
+CHAPITRE 26 Test, contrôle et finition après mise en service
+
+
+
+
+     V1.0                              Câblage G05 MOOS                3
+Câblage G05 MOOS
+
+
+
+
+                   CHAPITRE 1
+
+                   Indications   • Sommaire
+                      de base
+
+
+
+
+                                              V1.0   4
+1. Indications de base
+         La machine d’assemblage G05 a plusieurs configurations mécanique :
+
+           1M pour 1 Module                               2M pour 2 Modules
+
+
+
+
+                                                        MODULE 2    MODULE 1
+
+  V1.0                               Câblage G05 MOOS                          5
+6
+
+
+
+
+                                         V1.0
+                                             Câblage G05 V8
+                                     AB EU
+                        ARMOIRE A1
+
+
+
+
+    ARMOIRE A4
+                 ARMOIRE A3
+                                    MONTANT
+                                    GAUCHE
+
+                          Armoire A1
+
+                          Groupe d’air
+
+                          Armoire A2
+
+                          Tube Alimentation principale
+
+                           Barre de terre principale
+
+
+
+
+V1.0   Câblage G05 MOOS                                  7
+                                                                                                          Sommaire
+1. Indications de base
+                                  Points à faire attention lors du câblage:
+
+ Tous les câbles doivent être étiquetés aux 2 extrémités avec des labels UCT-WMT (23x4)
+
+ À proximité de chaque point de mise à la terre, il faut coller un autocollant avec le symbole de terre
+
+Les brides plastiques doivent être coupées à raz (danger de blessures)
+
+ Graisser les vis des parties mécaniques ex : Plaques de fermetures, support de prises…
+
+Comme pour toute documentation, il est important de d’abord lire tout le paragraphe/chapitre avant d’exécuter les
+consignes plutôt que de se lancer « tête baissée » après avoir parcouru un point. Dans certains cas, ceci peut être
+déterminant.
+
+En cas de doute ou d’incompréhension, ne pas hésiter à s’adresser à son responsable ou à ses collègues
+
+
+
+
+              La procédure qui suit explique le montage/câblage d’une machine G05 AB EU V8 - 2 modules.
+
+
+
+
+      V1.0                                            Câblage G05 MOOS                                           8
+Câblage G05 MOOS
+
+
+
+
+                   CHAPITRE 2
+
+                   Préparation du
+                   Frame
+
+
+
+
+                                    V1.0   9
+2. Préparation du frame                                                                      Sommaire
+
+2.1 Mettre en place les éléments suivant :
+
+    Vis M6x8 à tête bombée
+    Eléments de fixations, agrandir le trou de passage grâce à l’alène du couteau suisse
+
+
+
+
+             Montant gauche                                                  Montant droit
+
+                                              5x
+
+
+
+                                              5x
+
+
+
+
+      V1.0                                            Câblage G05 MOOS                             10
+Câblage G05 MOOS
+
+
+
+
+                   CHAPITRE 4
+
+                   Montage de l’équerre
+                   d’alimentation 230VAC
+
+
+
+
+                                           V1.0   11
+               Ce montage est le même pour le MODULE 1 que pour le MODULE 2
+
+
+- Brider les câbles sur l’emplacement le plus haut du peigne du bas (1).
+- Contrôler la position des câbles en pivotant l’armoire, la courbe des câbles doit être propre et elle
+    ne doit pas gêner la fermeture de l’armoire (2).
+
+- Fixer l’équerre d’alimentation 230VAC avec les 2 vis imbus M5x10 et 2 rondelles M5 fournis avec
+    l’équerre.
+
+                         (1)
+
+                                                                  (2)
+
+
+                                   (1)
+
+
+
+
+    V1.0                                       Câblage G05 MOOS                                     12
+    Passer la terre de l’équerre
+                                             • Visser le fil sur
+  jusqu’à la plaquette de terre en
+     bridant le fil sur le canal.
+                                               l’emplacement 7
+
+
+
+
+                                                            6 4 2
+                                                          7 5 3 1
+
+
+
+
+V1.0                          Câblage G05 MOOS                      13
+Câblage G05 MOOS
+
+
+
+
+                   CHAPITRE 9
+
+                   Câblage des
+                        terres   • Sommaire
+                     du Frame
+
+
+
+
+                                              V1.0   14
+                                             GENERALITE :
+                          Pour chaque terre fixée sur un goujon visser d’abord
+                            un écrou sans forcer puis une rondelle Rip-lock ,
+                                    cosse, rondelle fendue , écrou
+
+                           Pour les barrettes de terres mettre une rondelle Rip-lock, la
+                           cosse, une rondelle fendue et une vis laiton M5. Mettre les
+                             vis et les rondelles sur tout les taraudages des plaques
+
+
+
+
+       A chaque connexion de terre
+       Mettre un autocollant à proximité
+
+
+
+
+V1.0                              Câblage G05 MOOS                               15
+                                                                                              Sommaire
+                   9. Câblage des terres du Frame
+                   9.7 Distribution des fils de terre sur la plaque de cuivre principale.
+
+                                      Version AB EU V8
+
+                                          =GB1+FL1-WE1
+  Coffret filtre +A1 =GB1+A1-W1                  1 2                   =GB1+FL1-W6 Tube câble d’alim
+                                                 3 4
+
+                                                 5 6
+
+       Armoire +A2 =GB1+A2-W8                    7 8
+
+       Armoire +A3 =GB1+A3-W8                    9 10
+
+         Module 1 =GB1+FL1-W4                    11 12
+
+       Armoire +A4 =GB1+A4-W8                    13 14                 =GB1+FL1-W1 Frame
+        Module 2 =GB1+FL1-W5                     15 16                 =GB1+FL1-W2 Base du Frame
+                                                 17 18
+
+                                                 19 20
+
+
+
+
+V1.0                                          Câblage G05 MOOS                                         16
+                                                                                         Sommaire
+                       9. Câblage des terres du Frame
+9.9 Depuis les armoire +A3 et +A4, passer les fils =GB1+A3-W8 et =GB1+A4-W8 le long de la base du
+   Frame sans les brider (1). Passer comme sur les photos, dans le trou de droite du Frame (2) et devant
+   les tuyaux pneumatiques. Visser les cosses à l’horizontale en position 9 et 13.
+
+
+
+
+       (1)                                                       (2)
+
+
+
+     V1.0                                     Câblage G05 MOOS                                   17
+                                                                                     Sommaire
+                      9. Câblage des terres du Frame
+9.10 Passer les fils =GB1+FL1-W4 et =GB1+FL1-W5 depuis la plaque de cuivre principale (=GB1+FR1-WE1)
+   avec les fils tirés précédemment des armoires +A2 et +A3 (1).
+9.11 Visser les fils en position 11 et 15 sur la plaque de cuivre principale (2).
+9.12 Brider au propre (3) (4)
+
+
+
+
+                                          (2)
+                                                                                             (3)
+  (1)
+
+                                                                (4)
+
+
+
+
+     V1.0                                   Câblage G05 MOOS                                18
+                                                                                                    Sommaire
+9. Câblage des terres du Frame
+9.13 Raccorder le fil de terre =GB1+FL1-W4 sur la plaque de cuivre du module 1 en position 1 (1).
+9.14 Raccorder le fil de terre =GB1+FL1-W5 sur la plaque de cuivre du module 2 en position 1 (2).
+
+
+
+
+                                                                                                          (2)
+
+
+
+                                                                 (1)
+
+
+
+
+      V1.0                                           Câblage G05 MOOS                                     19
+                                                                                                        Sommaire
+9. Câblage des terres du Frame
+9.15 Le fil de terre =GB1+A2-W8 (sort de l’armoire +A2) doit aller se raccorder sur la plaque de cuivre principale en
+   position 7. Le fil de terre doit passer en dessous des câbles sortant de l’armoire (1).
+9.16 Brider sur l’emplacement 7 de tous les peignes (2). Une seule bride par emplacement.
+9.17 Passage derrière le tuyau pneumatique (3) puis revenir devant (4).
+
+
+
+
+                                                                                               1 2 3 4 5 6 7 8
+
+
+
+               (1)
+                                            (2)
+
+
+
+
+(3)   V1.0
+              (4)                                     Câblage G05 MOOS                                           20
+                                                                                                           Sommaire
+                            9. Câblage des terres du Frame
+9.18 Le fil de terre =GB1+A1-W1, est préparé sur une petite plaquette de terre et fait la liaison entre le coffret +A1 (filtre
+   d’entrée) et va se raccorder sur la barre de cuivre principale.
+9.19 Monter la petite plaquette de terre avec 1 vis M6x25 à tête bombée avec embase (N945.30.21.027), 2 écrous M6
+   en laiton 1 rondelle M6 élastique cintrée et 2 rondelles M6 Rip-lock à picot (1).
+→ Insérer la vis dans le trous du coffret +A1, insérer une rondelle à picot sur la vis et la serrer avec un écrou. Insérer une
+   rondelle à picot tournée en direction de la plaquette en cuivre puis insérer la plaquette en cuivre, la bloqué en
+   insérant la rondelle élastique et l’écrou par-dessus. Voir image de l’empilement ci-dessous (2).
+
+
+
+
+                                                                                                                         (1)
+
+
+                                 (2)
+
+
+
+
+      V1.0                                             Câblage G05 MOOS                                             21
+                                                                                                         Sommaire
+                           9. Câblage des terres du Frame
+
+9.20 Passer le fil de terre en longeant le tube d’alimentation client (1) puis en rejoignant le fil de terre qui descend de
+   l’armoire +A2 (2) en passant derrière la pneumatique. Le fil va se brancher sur l’emplacement 1 de la barre de cuivre
+   principale (3).
+
+
+                                                                                (1)
+
+
+
+                                                                                                             (3)
+         (1)
+                                                                     (2)
+
+
+
+
+      V1.0                                            Câblage G05 MOOS                                             22
+                                                                                                           Sommaire
+                            9. Câblage des terres du Frame
+9.21 Le fil de terre =GB1+FL1-W6 va sur le tube de l’alimentation client.
+9.22 Faire descendre la terre selon les images ci-dessous. Brider la terre sur le tube de l’alimentation client (1) puis sur
+   les deux fils de terres précédemment tirés (2).
+9.23 Visser la terre =GB1+FL1-W6 sur l’emplacement 2 de la barre de cuivre principale (3).
+
+
+
+
+                                                        (1)
+
+
+
+                                                        (2)
+
+
+
+                                                       (3)
+
+
+
+
+      V1.0                                             Câblage G05 MOOS                                             23
+                                                                                                       Sommaire
+                           9. Câblage des terres du Frame
+9.24 Le fil de terre =GB1+FL1-W1 doit se raccorder entre l’emplacement 14 de la barre de cuivre principale (1) et le
+   Frame.
+
+                                                                                            (1)
+
+
+
+
+                 Attention, mouvement vertical de la porte à
+                 proximité! Ne pas mettre la cosse de la terre trop
+                 à l’horizontale afin d’éviter de toucher le contre-
+                 poids.
+
+
+
+
+      V1.0                                            Câblage G05 MOOS                                          24
+                                                                                                       Sommaire
+9. Câblage des terres du Frame
+9.25 Le fil de terre =GB1+FL1-W2 doit se raccorder entre l’emplacement 16 de la barre de cuivre principale (1) et la base
+   du Frame.
+                                                               (1)
+
+
+
+
+                                                                                       Vis hexagonale M6x12
+                                                                                       (N942.00.03.132)
+
+
+
+
+                 Attention, cette terre à un sens de montage! Le
+                 côté M5 va sur la plaque de cuivre principale et le
+                 côté M6 sur la base du FRAME.
+
+
+
+      V1.0                                            Câblage G05 MOOS                                          25
+                                                                                            Sommaire
+                        9. Câblage des terres du Frame
+9.26 Les fils de terre du coffret +A1 sont à distribuer à différents emplacements dans le coffret ainsi que
+   sur le groupe pneumatique.
+9.27 Raccorder le fil se trouvant sur l’emplacement 1 (097+A1) sur la tôle du filtre d’entrée (1).
+9.28 Raccorder le fil se trouvant sur l’emplacement 2 (100+A1) sur le goujon du haut (2).
+                                       (2)
+
+
+
+
+                                                                   (1)
+
+
+
+
+     V1.0                                       Câblage G05 MOOS                                    26
+                                                                                                           Sommaire
+                           9. Câblage des terres du Frame
+9.29 Raccorder le fil (098+A1) sur la tôle de fond du groupe d’air (1) en se bridant sur le tube de l’alimentation client (2),
+   puis sur le premier emplacement du peigne (3).
+9.30 Raccorder le fil se trouvant sur l’emplacement 7 (099+A1) sur la tôle de fermeture du coffret +A1 (4). Attention à
+   l’orientation de la cosse (5) en direction de l’intérieur de la tôle, car sinon il ne sera pas possible de la fermer.
+
+
+
+
+             (2)                                                                                       (5)
+
+
+
+                                                                                                                  (4)
+
+                                                   (1)
+
+
+              (3)
+
+      V1.0                                               Câblage G05 MOOS                                           27
+                                Sommaire
+
+
+
+
+         CHAPITRE 10
+
+       Descente de câble
+        montant gauche
+
+
+V1.0         Câblage G05 MOOS         28
+                                                                  Sommaire
+10. Descente de câble montant gauche
+10.1 Identification des peignes.
+
+
+
+
+    1 2 3 4 5 6 7 8                1 2 3 4 5 6 7 8        1 2
+
+
+
+
+               Peigne A                  Peigne B               Peigne C
+
+
+
+
+      V1.0                             Câblage G05 MOOS                    29
+                                                                                                 Sommaire
+             10. Descente de câble montant gauche                                                       Faire
+                                   =SA1+A2-B1-W1 Capteur pression
+                                   =SA1+A2-K1-W1 Vanne 2 bars
+                                                                                                       rentrer ces
+                                   =SA1+A2-K1-W2 Contrôle 2 bars                                       9 câbles
+                                   =SA1+A2-K1-W3 Vanne 2 bars                                          dans le
+             Emplacement 1 & 2     =SA1+A2-K1-W4 Contrôle 2 bars                                       groupe
+                                   =SA1+A2-K1-W5 Vanne 6 bars
+                                   =SA1+A2-K1-W6 Contrôle 6 bars
+                                                                                                       d’air
+                                   =SA1+A2-K1-W7 Vanne 6 bars
+                                   =SA1+A2-K1-W8 Contrôle 6 bars
+                                   =CC1+A2-W1 (+A3)
+             Emplacement 3 & 4     =CC1+A2-W2 (+A4)
+                                   =AM1+A2-B1-W1 Codeur Absolu
+                                   =SC1+A2-W1 (+A3)
+PEIGNE A
+                                   =CD1+A2-B1-W1 Sonde Entrée Palette
+               Emplacement 5       =SG1+A2-S2-W1 Schmersal Tunnel Entré
+                                   =CI1+A2-B1-W1 Tête de Lecture BALUFF
+
+               Emplacement 6     LIBRE
+
+               Emplacement 7     LIBRE
+
+               Emplacement 8        =PS2+A2-K1-W2 Connecté en +A3 sur =PS1-K1 et laisser la sur longueur dans le
+                                        canal du frame
+
+
+
+
+      V1.0                                 Câblage G05 MOOS                                               30
+              10. Descente de câble montant gauche Sommaire
+                        10.3 Distribution des câbles pour une version AB EU V8
+                Emplacement 1      =PW1+A2-W2 Power allant à l’armoire +A3
+
+                Emplacement 2      =PW1+A2-W1 Power allant au filtre d’entrée +A1
+
+                Emplacement 3      LIBRE
+
+Peigne B       Emplacement 4 à 6   LIBRE
+
+                Emplacement 7        =GB1+A2-W8
+
+
+
+                                   =LT2+A2-X1-W1 Colonne lumineuse sur le toit
+                Emplacement 8
+                                   =LT1+A2-W1   Lampe d’éclairage de la cellule
+
+
+
+
+       V1.0                                 Câblage G05 MOOS                        31
+                                                                                                 Sommaire
+                 10. Descente de câble montant gauche
+Mesurer le câble =LT1+A2-W1 lampe d’éclairage depuis le bout du connecteur M12 et faire un repère à 140cm brider
+   sur le peigne C au niveau de ce repère.
+Brider les 2 câbles =LT1+A2-X1-W1 et =LT2+A2-W1 sur les 3 supports blancs en direction du toit
+
+
+
+
+                                            =LT1+A2-W1
+                                            =LT2+A2-X1-W1
+
+
+
+
+                                              Câbler et assembler la colonne lumineuse et la fixer avec
+                                              4 vis imbus M5 x 16 cylindriques + rondelles
+
+     V1.0                                         Câblage G05 MOOS                                       32
+                                                                                                Sommaire
+                    10. Descente de câble montant gauche
+ Passage du câble avec connecteur M12 =LT1+A2-W1 de l’armoire +A2 vers la lampe
+ Retirer la vis sur le dessus de la machine (1) (Fermer la porte pour avoir l’accès à la vis)
+ Retirer la tôle de passage du câble de lampe (2)
+
+
+
+
+                             (1)
+                                                                              (2)
+
+
+
+
+Retirer la tôle à l’intérieur de la machine en dévissant les 3 vis
+
+
+
+
+       V1.0                                               Câblage G05 MOOS                            33
+                                                                                          Sommaire
+                  10. Descente de câble montant gauche
+
+     Le câble entre par le trou du dessus
+     (1).
+                                                                         (1)
+
+
+
+
+                            (2)                                Brider sur les taquets blanc, passer
+                                                                  derrière la courroie (2)
+                                                               Passer le câble dans le trou du support (3)
+3)                                                             Remettre en place les tôles et les vis ne
+                                                                  pas oublier la vis du toit
+
+
+
+
+        V1.0                                Câblage G05 MOOS                                      34
+                                                       Sommaire
+       Montage de la lampe
+           La lampe se fixe sur la face avant et à
+                  l’intérieur de la machine
+
+
+
+
+                                               Utiliser les vis et
+                                               les rondelles déjà
+                                               présentes sur le
+                                               châssis
+
+
+
+
+V1.0           Câblage G05 MOOS                               35
+                                                                                                      Sommaire
+                 10. Descente de câble montant gauche
+Le câble de la tête de lecture Balluff =CI1+A2-B1-W1 passe dans le canal de droite puis celui du haut (1) de l’armoire
+ +A2 et doit être bridé sur le support noir et raccordé sur «Head 1» de =CI1-K1 (2)
+
+
+
+
+                                                   (2)
+
+
+
+
+                                                                                                           (1)
+
+
+
+
+           Tête de lecture Balluff
+
+
+
+
+    V1.0                                           Câblage G05 MOOS                                           36
+                                                                                                        Sommaire
+  10. Descente de câble montant gauche
+  Brider le câble de la tête de lecture Balluff =PI1+FR1-B1-W1, le câble du capteur palette =PC1+A2-B1-W1 et le câble du
+      Schmersal =SG1+A2-S2-W1 sur tube alimentation client (1).
+  Les câbles Balluff et capteur palette doivent être d’une longueur de 850 mm et le Schmersal de 1300mm à partir de la
+      dernière bride sur le tube (1).
+                                                                              Tête de lecture Balluff =CI1+FU1-B1
+
+
+
+
+(1)
+
+
+
+                                                                              Capteur palette =PC1+A2-B1
+
+
+
+
+        V1.0                                           Câblage G05 MOOS                                         37
+                                                                                                       Sommaire
+10. Descente de câble montant gauche
+10.22 Passer le câble de capteur palette derrière la vis (1) et le raccorder avec le câble de la sonde =PC1+FR1-B1.
+10.23 Mettre au propre la descente de câble, le mou de câble de la tête de lecture Balluff et du capteur de palette doit
+   être mis au propre dans la descente de câble et sous le Frame (2).
+
+
+
+
+       (1)
+
+
+                                                                                                             (2)
+
+
+
+
+      V1.0                                           Câblage G05 MOOS                                           38
+                                                                                                 Sommaire
+10. Descente de câble montant gauche
+10.24 Continuer en respectant l’ordre croissant, peigne A emplacement 1, 2, 3…
+10.25 Les autres câbles de la descente doivent passer derrière le conduit alimentation client.
+
+
+
+
+      V1.0                                            Câblage G05 MOOS                                 39
+                                                                              Sommaire
+10. Descente de câble montant gauche
+10.30 Les câbles du peigne A sont des câbles faible tension et de commande.
+
+
+
+
+      V1.0                                          Câblage G05 MOOS                40
+                                                                        Sommaire
+10. Descente de câble montant gauche
+10.31 Le câble Ethernet doit être séparé des autres câbles.
+
+
+
+
+      V1.0                                           Câblage G05 MOOS         41
+                                                                                                      Sommaire
+10. Descente de câble montant gauche
+10.33 Passer les câbles dans le canal du socle du Frame. Il faut séparer les câbles de puissance des câbles de commande.
+
+
+=CM1+A3-M1-W2                                   Canal module MASTER.
+=CM2+A3-M1-W2
+=CM3+A3-M1-W2
+=PW1+A2-W2                                                                                                 Puissance
+
+=AS1+A2-W3                                                                                                 Commande
+=AS1+A2-W4
+=SC1+A2-W1                                                                                                  Réseau
+=CC1+A2-W1
+=EM1+A2-B1-W1
+
+=SD1+A2-K1-W1
+
+
+                                              Canal module SLAVE si version 2M
+=CM4+A3-M1-W2
+=PW1+A4-W1
+=PW1+A4-W2                                                                                                 Puissance
+
+=AS2+A2-W3                                                                                                 Commande
+=AS2+A2-W4
+                                                                                                            Réseau
+=CC1+A2-W2
+
+ Réserve
+
+
+
+
+      V1.0                                           Câblage G05 MOOS                                          42
+                                                                                                       Sommaire
+10. Descente de câble montant gauche
+10.34 Faire sortir le câble =EM1+A2-B1-W1 par le bout du canal (1) puis le faire remonter en longeant le rebord du
+   Frame (2). L’attacher proprement dans le canal de droite (3) et le faire remonter jusqu’au codeur principal (4).
+
+
+
+
+                                                                               (4)
+
+     (1)                         (2)
+
+
+
+
+                                                                              (3)
+
+
+
+
+      V1.0                                           Câblage G05 MOOS                                          43
+                                                                                            Sommaire
+10. Descente de câble montant gauche
+10.35 Les derniers câbles à mettre en place sont les câbles des moteurs de bande.
+Brider les câbles =CM1+A3-M1-W2, =CM2+A3-M1-W2 et =CM3+A3-M1-W2 sur les deux peignes B du bas, en position 4
+    (1) et les laisser en attente.
+
+
+
+
+                                                                               (1)
+
+
+
+
+     V1.0                                       Câblage G05 MOOS                                    44
+                                                                                     Sommaire
+10. Descente de câble montant gauche
+10.36 Le câble =CM4+A3-M1-W2 doit passer dans le canal sous l’armoire SLAVE (1).
+Brider sur les peignes du montant droit et laisser en attente (2).
+
+
+
+
+                                                   (1)
+
+                                                                               (2)
+
+
+
+
+     V1.0                                          Câblage G05 MOOS                        45
+                                                                    Sommaire
+10. Descente de câble montant gauche
+10.37 Ci-dessous des photos du résultat final.
+
+
+
+
+      V1.0                                       Câblage G05 MOOS         46
+                                 Sommaire
+
+
+
+
+           CHAPITRE 5
+
+       Montage de la lampe
+
+
+
+V1.0          Câblage G05 MOOS         47
+                                  Sommaire
+
+
+
+
+           CHAPITRE 13
+
+       Câblage système d’air
+
+
+
+V1.0           Câblage G05 MOOS         48
+                                                    Sommaire
+            13. Câblage système d’air
+                                        Chaque vanne a 2 têtes
+                                        d’électrovanne (V1 ET V2)
+                                        et 2 sondes de position (S1
+                                        et S2)
+
+                     V1 V2
+
+
+
+
+       Pressostat
+       =SA1+FL1-B1
+
+
+
+V1.0                 Câblage G05 MOOS                      49
+                                                                               Sommaire
+                      13. Câblage système d’air
+Voici le système une fois le câblage terminé :
+                                                           Identifier les câbles des sondes
+                                                           S1 et S2 :
+
+                                                           S1 =SA1+FL1-K1-W2
+                                                           S2 =SA1+FL1-K1-W4
+
+                                                           S1 =SA1+FL1-K1-W6
+                                                           S2 =SA1+FL1-K1-W8
+                                                           Et le pressostat =SA1+FL1-B1
+                                                              Les câbles =SA1+A2-K1-W3
+                                                              et         =SA1+A2-K1-W5
+                                                              montent directement à leur
+                 S1                S1                         point de connexion
+                 S2                S2                         Faire un toron avec les autres
+                                                              câbles en suivant le fond du
+                                                              groupe d’air
+
+
+
+ V1.0                                   Câblage G05 MOOS                             50
+Connecté le tout, nous désignerons les câbles simplement par
+W1, W2, W3…ect
+
+        =SA1+A2-B1-W1
+
+
+                            W1 W3                 W5 W7
+
+
+
+
+                        W2 W4       W6 W8
+
+
+V1.0                                Câblage G05 MOOS           51
+                                                                             Sommaire
+10. Descente de câble montant gauche
+10.32 Les câbles du peigne B sont des câbles haute tension.
+Passer les câbles devant le toron de fil de terre (1).
+
+
+
+
+      V1.0                                          Câblage G05 MOOS   (1)         52
+                                      Sommaire
+
+
+
+
+              CHAPITRE 8
+
+          Montage du switch
+       principal et filtre d’entrée
+
+
+V1.0              Câblage G05 MOOS          53
+                                                                                                    Sommaire
+8. Montage du switch principal et filtre d’entrée
+Ce montage peut être réalisé ultérieurement.
+8.1 Préparer 8 écrous M6 en inox (N948.00.00.013), 8 rondelles M6 en inox N948.70.00.016 pour la fixation de la plaque
+    du filtre d’entrée.
+8.2 Visser 4 écrous et ajouter 4 rondelles sur les goujons dans le coffret +A1.
+
+
+
+
+      V1.0
+                                                 Visser   l’écrou côté tôle à la main.
+                                                    Câblage G05 MOOS                                         54
+                                                                                                              Sommaire
+8. Montage du switch principal et filtre d’entrée
+8.3 Démonter la partie frontale du switch principal avec la gomme blanche et le joint autour de la barre carrée.
+
+
+
+
+8.4 Installer la plaque de fond avec le filtre et le switch principal dans le coffret +A1. Le support noir (1) sert à brider le
+    câble d’alimentation du client, il est donc préférable de le laisser libre une fois la plaque installée.
+8.5 Serrer et bloquer les 4 écrous avec rondelles sur la plaque de fond.
+
+
+
+         (1)
+
+
+
+
+      V1.0                                               Câblage G05 MOOS                                              55
+                                                                                                           Sommaire
+8. Montage du switch principal et filtre d’entrée
+8.6 Désolidariser le capot frontal du switch en y insérant le tournevis et en le tirant légèrement sur l’intérieur selon
+    image (1).
+8.7 Mettre en place le switch principal en empilant sur la barre carrée le joint noir et blanc (2), et la première partie
+    frontale (3).
+
+
+                        (1)                                    (2)                               (3)
+
+
+
+
+      V1.0                                             Câblage G05 MOOS                                             56
+                                                                                                            Sommaire
+8. Montage du switch principal et filtre d’entrée
+8.8 Serrer et bloquer les 4 vis fournies avec le switch (1) (si elle ne sont pas avec, elles se trouvent dans l’armoire +A2).
+8.9 Remonter le reste de la partie frontale du switch.
+
+
+                    (1)
+
+
+
+
+8.10 Brider propre les fils de liaison entre switch et filtre d’entrée.
+
+
+
+
+      V1.0                                               Câblage G05 MOOS                                            57
+                               Sommaire
+
+
+
+
+        CHAPITRE 11
+
+       Câblage armoire
+        +A3 MASTER
+
+
+V1.0        Câblage G05 MOOS         58
+                                                                                                      Sommaire
+11. Câblage armoire +A3 MASTER
+           Lors du câblage des armoires +A3 MASTER et +A4 SLAVE, faire attention au passage des câbles pour qu’il
+               n’y ai pas de conflits lors des ouvertures et fermetures des armoires. Faire partir les torons de câbles
+               directement vers le bas.
+
+
+
+
+         Les câbles doivent être raccordés au plus court dans l’armoire, les réserves de câbles sont à placer sous le
+         Frame.
+
+
+
+
+  V1.0                                             Câblage G05 MOOS                                            59
+                                                                                      Sommaire
+11. Câblage armoire +A3 MASTER
+11.2 Voici la disposition des câbles sur le peigne qui se trouve dans le Frame.
+
+
+
+
+                                                                                  1
+
+
+                                                                                  2
+                                                                                  3
+                                                                                  4
+
+
+
+
+                                                                                  5
+
+1: =TM1+A3-W2 & =MM1+A3-M1-W2.
+2: =MM1+A3-M1-W1.
+3: =TM1+A3-W1.
+4: =PR1+A3-W1, =PR1+A3-W2 & =PR1+A3-W3.
+5: =EM1+A2-B1-W1.
+      V1.0                                            Câblage G05 MOOS                      60
+                                                                                         Sommaire
+11. Câblage armoire +A3 MASTER
+11.3 Les câbles de commande entrent sur les passages du haut en passant par le peigne.
+Mesurer depuis le bout des câbles et faire un repère pour:
+- =AS1+A2-W3 & =AS1+A2-W4 à 600mm
+- =CC1+A2-W1 à 660mm
+- =SD1+A2-K1-W1 à 1300mm
+
+
+
+
+      V1.0                                         Câblage G05 MOOS                            61
+                                                                                               Sommaire
+11. Câblage armoire +A3 MASTER
+11.4 Faire passer les câble de commande venant de +A2, (=AS1+A2-W3, =AS1+A2-W4, =CC1+A2-W1, =SD1+A2-K1-W1 et
+=SC1+A2-W1) en suivant les terres (1) puis en remontant sur le peigne (2).
+11.5 Placer les repères mesurés sur le slide précédant à raz la gomme de passage (3), la partie dénudée du câble
+=SC1+A2-W1 doit se placer sur la gomme de passage (4).
+
+                                                                                         =AS1+A3-W1
+                                                                                         =AS1+A3-W2
+                                                                                         =AS1+A2-W3
+                                                                                         =AS1+A2-W4
+                                                                                         =CC1+A2-W1
+                                                                                         =SD1+A2-K1-W1
+                                                                                         =SC1+A2-W1
+                                                                                         =TM1+A3-W2
+                           (2)                                                           =MM1+A3-M1-W2
+                                                               (3)
+
+
+
+
+ (1)                                                  (4)
+
+       V1.0                                      Câblage G05 MOOS                                      62
+                                                                                                Sommaire
+11. Câblage armoire +A3 MASTER
+11.6 Les câbles =MM1+A3-M1-W1 (1) et =MM1+A3-M1-W2 (2) doivent être raccordés sur le moteur rotatif, si le moteur
+    n’est pas monté, voir un responsable.
+Attention, le moteur n’est pas obligatoirement placé dans le module MASTER.
+11.7 Passer les câbles comme sur la photo, brider sur le peigne.
+
+
+
+
+                                            (1)                      (2)
+
+
+
+
+     V1.0                                         Câblage G05 MOOS                                      63
+                                                                                                     Sommaire
+11. Câblage armoire +A3 MASTER
+11.8 Le câble =TM1+A3-W1 passe à travers le module (1) (trop court pour passer dans le canal) pour aller se raccorder
+   sur le moteur linéaire situé à l’avant de la machine (2) en passant sous la barre transversale du Frame (3).
+
+
+
+
+                                                                 (1)
+
+                                                                       (2)
+
+
+
+
+                                                                             (3)
+
+
+
+
+      V1.0                                          Câblage G05 MOOS                                          64
+                                                                                                     Sommaire
+11. Câblage armoire +A3 MASTER
+11.9 Le câble =TM1+FR1-W3 situé au dessus du moteur transfert (1) descend avec le câble =TM1+A3-W1 (2) puis passe
+   dans le canal (3) pour ensuite remonter vers les gommes de passage de l’armoire +A3 (4) et se plugger avec le câble
+   =TM1+A2-W2 (5).
+
+
+
+
+                                                                                        (3)
+(1)
+                                         (2)
+
+
+
+
+(5)
+                                 (4)
+
+      V1.0                                          Câblage G05 MOOS                                         65
+                                                                        Sommaire
+11. Câblage armoire +A3 MASTER
+11.10 Les câbles de puissance entrent sur les passages du bas.
+
+
+
+
+      V1.0                                           Câblage G05 MOOS         66
+                                                                           Sommaire
+11. Câblage armoire +A3 MASTER
+11.11 Faire passer les câble de puissance venant des autres armoires (=PW1+A4-W1,
+   =PW1+A4-W2 et =PW1+A2-W2) directement dans l’armoire (1). Ces câbles rentrent de
+   environ 30 à 40mm à l’intérieur de l’armoire (2).
+
+
+
+
+                                                                             (2)
+
+
+
+
+                                    (1)
+
+
+
+
+    V1.0                    Câblage G05 MOOS                   67
+                                                                                                         Sommaire
+11. Câblage armoire +A3 MASTER
+11.12 La suite indique la manière de raccorder les fils à l’interne des armoires.
+11.13 La numérotation sur le fil indique l’emplacement sur lequel il doit être raccordé (1).
+
+
+                                         (3)
+
+
+
+
+                        (1)
+11.14 La dernière lettre après les «:» indique la position dans la borne selon le tableau ci-dessous. Le trou de la borne se
+   trouvant à proximité de l’étiquette (2) correspond à la position a. Donc l’emplacement pour l’exemple ci-dessus est
+   le d (sur la gauche (3) de la borne)
+                                                           (2)
+
+
+
+
+      V1.0                                            Câblage G05 MOOS                                            68
+                                                                                                        Sommaire
+11. Câblage armoire +A3 MASTER
+11.15 Le câble =SD1+A2-K1-W1 va se raccorder sur le drive de gauche emplacement X3 A (1) en passant sur les équerres
+   de fixation et en se bridant avec les deux câbles déjà présent.
+11.16 Les fils de la partie puissance se raccordent sur la plaque de fond à côté des passages de câble (2). Les fils de la
+   partie commande se raccordent sur la plaque de gauche (3). Les terres se raccordent sur la plaque du bas (4).
+
+
+
+
+                                                                                    (1)
+                                           (2)
+
+
+
+             (3)
+
+
+
+
+                       (4)
+
+      V1.0                                            Câblage G05 MOOS                                          69
+                                                                                                      Sommaire
+11. Câblage armoire +A3 MASTER
+11.17 Ajouter une étiquette =SD1+A2-K1-W1 derrière le passage de câble à l’intérieur de l’armoire (1), puis déplacer les
+   étiquettes des autres câbles à l’intérieur de l’armoire (2), derrière les passages de câbles.
+
+
+
+
+                                 (2)                                       (1)
+
+
+
+
+11.18 Mettre en place le cache du canal.
+
+
+
+
+      V1.0                                           Câblage G05 MOOS                                          70
+                                                                     Sommaire
+11. Câblage armoire +A3 MASTER
+11.19 Mettre en place une clef d’armoire rouge.
+
+
+
+
+      V1.0                                        Câblage G05 MOOS         71
+                                                                    Sommaire
+11. Câblage armoire +A3 MASTER
+11.20 Ci-dessous des photos du résultat final.
+
+
+
+
+      V1.0                                       Câblage G05 MOOS         72
+                               Sommaire
+
+
+
+
+        CHAPITRE 12
+
+       Câblage armoire
+         +A4 SLAVE
+
+
+V1.0        Câblage G05 MOOS         73
+                                                                                   Sommaire
+12. Câblage armoire +A4 SLAVE
+          Lors du câblage des armoires +A3 MASTER et +A4 SLAVE, faire attention au passage
+             des câbles pour qu’il n’y ai pas de conflits lors des ouvertures et fermetures des
+             armoires. Faire partir les torons de câbles directement vers le bas.
+
+
+
+
+         Les câbles doivent être raccordés au plus court dans l’armoire, les réserves de câbles
+         sont à placer sous le Frame.
+
+
+
+
+  V1.0                         Câblage G05 MOOS                       74
+12. Câblage armoire +A4 SLAVE                                                                        Sommaire
+
+12.1 Distribution des câbles pour une armoire +A4 SLAVE version MOOS V8.
+
+
+
+                                                                           ASi noir venant de l’armoire +A2 =AS2+A2-W4
+   Alim. 24VDC non-coupé venant de l’armoire
+                 +A2 =CC1+A2-W2
+                                                                                      ASi noir =AS2+A4-W2
+
+                                                                                     ASi jaune =AS2+A4-W1
+
+                                                                           ASi jaune venant de l’armoire +A2 =AS2+A2-
+                                                                                                  W3
+
+
+
+
+             Alim. 230VAC bol vibrant
+                   =PR2+A4-W1
+
+             Alim. 230VAC bol vibrant
+                   =PR2+A4-W1
+
+                                                                                     Fil de terre =GB1+A4-W8
+         400VAC E-STOP =PW1+A4-W2
+                                                                                    Alim. 230VAC bol vibrant
+              400VAC =PW1+A4-W1                                                           =PR2+A4-W3
+      V1.0                                        Câblage G05 MOOS                                             75
+                                                                                             Sommaire
+12. Câblage armoire +A4 SLAVE
+12.2 Les câbles de commande entrent sur les passages du haut en passant par le peigne (1).
+Mesurer depuis le bout des câbles et faire un repère pour:
+- =AS2+A2-W3 & =AS2+A2-W4 à 600mm
+- =CC1+A2-W2 à 660mm
+
+
+
+
+      V1.0                                          Câblage G05 MOOS                               76
+                                                                               Sommaire
+12. Câblage armoire +A4 SLAVE
+12.3 Faire passer les câble de commande venant de +A2, (=AS2+A2-W3, =AS2+A2-W4 & =CC1+A2-W2)
+en suivant les terres (1) puis en remontant sur le peigne (2).
+12.4 Placer les repères mesurés sur le slide précédant à raz la gomme de passage (3).
+
+
+
+
+                                                                          =AS2+A4-W1
+                                                                          =AS2+A4-W2
+
+                                                                          =AS2+A2-W3
+                                                                          =AS2+A2-W4
+
+               (2)                                                        =CC1+A2-W2
+
+
+                                                 (3)
+
+
+
+
+ (1)
+
+       V1.0                   Câblage G05 MOOS                     77
+                                                                                                         Sommaire
+12. Câblage armoire +A4 SLAVE
+12.5 Les câbles de puissance entrent sur les passages du bas. Sur le standard, il n’y a pas de câble de puissance à rentrer.
+
+
+
+
+      V1.0                                            Câblage G05 MOOS                                            78
+                                                                                    Sommaire
+12. Câblage armoire +A4 SLAVE
+12.6 La suite indique la manière de raccorder les fils à l’interne des armoires.
+12.7 La numérotation sur le fil indique l’emplacement sur lequel il doit être raccordé (1).
+
+
+                                 (3)
+
+
+
+
+                   (1)
+
+12.8 La dernière lettre après les «:» indique la position dans la borne selon le tableau ci-
+   dessous. Le trou de la borne se trouvant à proximité de l’étiquette (2) correspond à la
+   position a. Donc l’emplacement pour l’exemple ci-dessus est le d (sur la gauche (3) de la
+   borne)
+                                                   (2)
+
+
+
+
+     V1.0                       Câblage G05 MOOS                       79
+                                                                                  Sommaire
+12. Câblage armoire +A4 SLAVE
+12.9 Les fils de la partie puissance se raccordent sur la plaque de fond à côté des passages de
+   câble (1), pas de fils de puissance à raccorder sur cette version. Les fils de la partie
+   commande se raccordent sur la plaque de gauche (2). Les terres se raccordent sur la plaque
+   du bas (3), pas de fils de terre à raccorder sur cette version.
+
+
+
+
+                                  (1)
+
+
+
+           (2)
+
+
+
+
+                  (3)
+
+    V1.0                       Câblage G05 MOOS                      80
+                                                                                                            Sommaire
+12. Câblage armoire +A4 SLAVE
+12.10 Déplacer les étiquettes des câbles à l’intérieur de l’armoire (1), derrière les passages de câbles.
+
+
+
+
+                                                      (1)
+
+
+12.11 Mettre en place le cache du canal.
+
+
+
+
+      V1.0                                             Câblage G05 MOOS                                           81
+                                                       Sommaire
+12. Câblage armoire +A4 SLAVE
+12.12 Mettre en place une clef d’armoire rouge.
+
+
+
+
+    V1.0                       Câblage G05 MOOS   82
+                                                                    Sommaire
+12. Câblage armoire +A4 SLAVE
+12.13 Ci-dessous des photos du résultat final.
+
+
+
+
+      V1.0                                       Câblage G05 MOOS         83
+                                  Sommaire
+
+
+
+
+           CHAPITRE 14
+
+       Câblage ASi et lampe
+       dans armoire A2 CMD
+
+
+V1.0           Câblage G05 MOOS         84
+                                                                                           Sommaire
+14. Câblage ASi et lampe dans armoire A2 CMD
+14.1 Les câbles ASi =AS1+A2-W1, =AS1+A2-W2, =AS2+A2-W1 (Version 2M), =AS2+A2-W2 (Version 2M) précédemment
+   passés doivent être câblés dans l’armoire +A2 Commande.
+
+
+
+
+     V1.0                                      Câblage G05 MOOS                                   85
+                                                                         Sommaire
+14. Câblage ASi et lampe dans armoire A2 CMD
+14.2 Les câbles ASi doivent passer dans le canal du fond (1).
+
+
+
+
+                                                                                (1)
+
+
+
+
+      V1.0                                            Câblage G05 MOOS         86
+                                                                                    Sommaire
+14. Câblage ASi et lampe dans armoire A2 CMD
+14.3 La suite indique la manière de raccorder les fils à l’interne des armoires.
+14.4 La numérotation sur le fil indique l’emplacement sur lequel il doit être raccordé (1).
+
+
+                                 (3)
+
+
+
+
+                   (1)
+
+14.5 La dernière lettre après les «:» indique la position dans la borne selon le tableau ci-
+   dessous. Le trou de la borne se trouvant à proximité de l’étiquette (2) correspond à la
+   position a. Donc l’emplacement pour l’exemple ci-dessus est le d (sur la gauche (3) de la
+   borne)
+                                                   (2)
+
+
+
+
+     V1.0                       Câblage G05 MOOS                       87
+                                                                                                  Sommaire
+14. Câblage ASi et lampe dans armoire A2 CMD
+14.6 Les fils des câbles ASi se raccordent sur les bornes se trouvant sur la plaque du bas (1).
+
+
+
+
+      (1)
+
+
+
+
+      V1.0                                             Câblage G05 MOOS                                 88
+                                Sommaire
+
+
+
+
+         CHAPITRE 15
+
+       Montage / passage
+         de câble HMI
+
+
+V1.0         Câblage G05 MOOS         89
+                                                                                                      Sommaire
+15. Montage / câblage HMI
+Ce montage peut être réalisé ultérieurement.
+15.1 Démonter la tôle bleu (1) sur la partie supérieur en demandant de l’aide à une personne à proximité et la
+   déposer sur l’armoire +A2 (2). Remettre les vis à leurs emplacements (3) afin d’éviter de les perdre.
+
+
+
+
+(1)
+
+
+
+
+                                                                                       (3)
+
+
+
+
+                         (2)
+
+      V1.0                                          Câblage G05 MOOS                                             90
+                                                                                                      Sommaire
+15. Montage / câblage HMI
+15.2 Récupérer le papier bulle se trouvant autour du HMI afin de pouvoir déposer les tôles qui vont être
+   démontées au chapitre suivant dans la cellule et d’éviter les pertes.
+
+
+
+
+     V1.0                                           Câblage G05 MOOS                                        91
+                                                                         Sommaire
+15. Montage / câblage HMI
+Ce montage peut être réalisé ultérieurement.
+15.3 Mettre en place le HMI sur son support mobile.
+
+
+
+
+     V1.0                                             Câblage G05 MOOS         92
+                                                                       Sommaire
+15. Montage / câblage HMI
+15.4 Visserie pour le montage du HMI :
+Il est préférable d’être à deux pour cette étape.
+
+5 x Vis imbus M8X12 (N940.20.03.076).
+4 x Rondelles M8 (N948.70.00.019).
+1 x Rondelle large M8 (N948.71.00.010).
+
+
+
+
+                                   Rondelle large M8
+
+
+
+     V1.0                                           Câblage G05 MOOS         93
+                                                                 Sommaire
+15. Montage / câblage HMI
+15.5 Placer le HMI au milieu de la machine.
+
+
+
+
+      V1.0                                    Câblage G05 MOOS         94
+                                                                       Sommaire
+15. Montage / câblage HMI
+15.6 Mettre en place la chaine HMI sur le support mobile.
+2 x Vis imbus M4X40 (N940.30.03.024).
+2 x Rondelle M4 (N948.70.00.012).
+
+
+
+
+     V1.0                                           Câblage G05 MOOS         95
+                                                                        Sommaire
+15. Montage / câblage HMI
+15.7 Mettre en place la chaine HMI sur le support fixe.
+2 x Vis imbus M4X45 (N940.30.03.025).
+2 x Rondelle M4 (N948.70.00.012).
+
+
+
+
+     V1.0                                            Câblage G05 MOOS         96
+                                                                                               Sommaire
+15. Montage / câblage HMI
+15.8 Commencer par mettre en place le câble =HM1+OP1-W5 sur l’emplacement 3 du peigne et le câble
+   =HM1+OP1-W7 sur l’emplacement 4 du peigne.
+15.9 Raccorder les prises :
+=HM1+OP1-W4 à =HM1+OP1-W5.
+=HM1+OP1-W6 à =HM1+OP1-W7.
+15.10 Visser les vis moletées (1).
+                                                               (1)
+
+
+
+
+                 1 2 3 4 5 6 7 8
+
+
+
+
+     V1.0                                        Câblage G05 MOOS                                    97
+                                                                                                    Sommaire
+15. Montage / câblage HMI
+15.11 Passer et raccorder les autres câbles un par un dans le boitier HMI.
+
+15.12 Brider les câbles au peigne, les câbles doivent suivre la courbe des câbles CBL14101A et CBL14001A
+   précédemment bridés.
+
+
+              Emplacement 1 :
+              =HM1+OP1-PH1-W1
+              Emplacement 2 :
+              =HM1+OP1-K1-W5
+              Emplacement 3 :
+              =HM1+OP1-W5                                               1 2 34 567 8
+              Emplacement 4 :
+              =HM1+OP1-W7
+              Emplacement 5 :
+              =GB1+OP1-W1
+              Emplacement 6 :
+              =SP1+OP1-W1
+              Emplacement 7 :
+              =HM1+OP1-G1-W1
+              Emplacement 8 :
+              Libre
+
+
+     V1.0                                            Câblage G05 MOOS                                      98
+                                                                                                          Sommaire
+15. Montage / câblage HMI
+15.13 Raccorder les câbles dans le boitier HMI.
+
+15.14 Raccorder le fil de terre =GB1+OP1-W1 sur la plaque de cuivre =GB1-WE1 (1).
+
+15.15 Brider le câble =SP1+OP1-W1 au support (2), mettre en place la prise, rondelle à l’extérieur (3).
+
+
+
+
+                       (1)                                                                         (3)
+
+
+
+
+                                                     (2)
+
+
+
+
+     V1.0                                            Câblage G05 MOOS                                           99
+                                                                                    Sommaire
+15. Montage / câblage HMI
+15.16 La suite indique la manière de raccorder les fils à l’interne des armoires.
+15.17 La numérotation sur le fil indique l’emplacement sur lequel il doit être raccordé (1).
+
+
+                                 (3)
+
+
+
+
+                   (1)
+
+15.18 La dernière lettre après les «:» indique la position dans la borne selon le tableau ci-
+   dessous. Le trou de la borne se trouvant à proximité de l’étiquette (2) correspond à la
+   position a. Donc l’emplacement pour l’exemple ci-dessus est le d (sur la gauche (3) de la
+   borne)
+                                                   (2)
+
+
+
+
+     V1.0                       Câblage G05 MOOS                       100
+                                                                                                   Sommaire
+15. Montage / câblage HMI
+15.19 Raccorder les fils des 2 câbles =HM1+OP1-W5 & =HM1+OP1-W7 sur les différents interrupteurs. Concernant
+   l’esthétique, il ne faut pas chercher trop les détails et concilier la propreté avec le temps passé.
+
+
+
+
+                                                =HM1-S4
+                                                                                         13   23        11        21
+              =HM1-S10   =HM1-S6     =HM1-S5
+   =HM1-S2                                                      =HM1-S3
+                                                                           =HM1-S1
+
+
+
+                                                                                         14   24       12         22
+
+
+
+
+              =HM1-S8    =HM1-S9     =HM1-S7
+
+
+
+
+                                                   (=GB1-WE1:5)            (=GB1-WE1:3)
+
+     V1.0                                        Câblage G05 MOOS                                           101
+                                                                                                Sommaire
+15. Montage / câblage HMI
+15.20 Raccorder les fils du câble de l’alimentation 24VDC/12VDC =HM1+OP1-G1-W1, puis le brider à son emplacement
+   (1).
+15.21 Raccorder le câble d’alimentation 12VDC du HMI =HM1+OP1-PH1-W3. Brider le câble d’alimentation du HMI sur
+   les emplacements prévus à cet effet (2).
+
+
+
+
+                                                                                               (2)
+            (1)
+
+
+
+
+     V1.0                                        Câblage G05 MOOS                                      102
+                                                                                                Sommaire
+15. Montage / câblage HMI
+15.22 Brancher le câble Display Port =HM1+OP1-PH1-W1 à l’emplacement prévu à cet effet (1).
+15.23 Brancher la rallonge USB =HM1+OP1-PH1-W2 livrée avec le HMI sur le câble =HM1+OP1-K1-W5 (2) (laisser la
+   réserve comme sur l’image (3)). Brancher l’autre extrémité sur l’emplacement prévu à cet effet (4).
+
+
+                   (1)                        (2)
+
+
+
+
+                                                                            (3)
+
+
+                                                                            (4)
+
+
+
+
+     V1.0                                         Câblage G05 MOOS                                      103
+                                                                            Sommaire
+15. Montage / câblage HMI
+15.24 Mettre au propre les câbles, doubler le bridage sur le support (1).
+
+
+
+
+                                                                                  (1)
+
+
+
+
+     V1.0                                            Câblage G05 MOOS             104
+                                                                                                   Sommaire
+15. Montage / câblage HMI
+15.25 Mettre en place les peignes sur le montant droit de la machine.
+Les peignes sont livrés avec le HMI (1).
+15.26 Mettre en place les 4 entretoises hexagonales M6X10 (N951.21.23.031) (2), puis les deux peignes avec 4
+    vis à tête fraisées M6X12 (N943.20.04.033) (3).
+
+
+
+
+                           (1)
+                                                                 (2)
+                                                                                                      (3)
+
+
+
+
+     V1.0                                          Câblage G05 MOOS                                         105
+                                                                       Sommaire
+15. Montage / câblage HMI
+15.27 Brider sur les peignes du dessus de la machine.
+
+
+
+
+                         =HM1+OP1-PH1-W1
+                         =HM1+OP1-K1-W5
+                         =HM1+OP1-W4
+                         =HM1+OP1-W6
+                         =GB1+OP1-W1
+                         =SP1+OP1-W1
+                         =HM1+OP1-G1-W1
+                          Libre
+
+     V1.0                                           Câblage G05 MOOS         106
+                                                                                                       Sommaire
+15. Montage / câblage HMI
+15.28 Passer les câbles par le trou (1).
+Lors du bridage au peigne suivant, les câbles ne doivent pas être tendus, ils ne doivent pas toucher le support
+    HMI (2).
+15.29 Uniquement pour machine 2 Modules: - Avertir le mécanicien avant de remonter les tôles afin qu’il
+    puisse monter le crochet HMI
+15.30 Remonter les tôles.
+
+
+
+               (1)
+
+
+
+
+                   (2)
+
+
+
+
+     V1.0                                            Câblage G05 MOOS                                             107
+                                                                                                     Sommaire
+15. Montage / câblage HMI
+15.31 Passer les câbles un à un dans l’armoire +A2 CMD. Laisser la mise au propre des câbles sur le montant
+   droit en attente.
+
+
+
+
+     V1.0                                           Câblage G05 MOOS                                          108
+                                                                                                           Sommaire
+15. Montage / câblage HMI
+15.32 Pour permettre la rotation du HMI, détendre les écrous du dessus (1).
+
+15.33 Détendre les vis à l’intérieur du boitier (2) jusqu’à ce que la rotation du HMI puisse se faire, la rotation ne
+   pas être trop « libre », elle doit être « grasse » (3).
+
+15.34 Serrer les écrous du dessus.
+
+                                                                                               (2)
+                             (1)
+
+
+                                                              (3)
+
+
+
+
+      V1.0                                              Câblage G05 MOOS                                           109
+                                                                                                     Sommaire
+15. Montage / câblage HMI
+15.35 Mettre en place la clef de configuration (1), elle se trouve dans le sachet dans le HMI (2).
+Placer la documentation avec la télécommande dans l’armoire +A2 CMD (3), laisser la visserie pour la fixation du
+    couvercle HMI engagée dans les taraudages (4). Les 2 câbles (HDMI & VGA) peuvent être placés dans la benne des
+    rebuts de câbles, sans oublier de les déballer (5).
+
+
+                                             (1)
+
+
+                                                                                             (2)
+
+
+
+
+                                                                                                           (5)
+
+                                     (3)                                        (4)
+
+
+
+
+      V1.0                                             Câblage G05 MOOS                                    110
+                             Sommaire
+
+
+
+
+       CHAPITRE 16
+
+       Câblage HMI
+
+
+
+V1.0      Câblage G05 MOOS         111
+                                                                                                     Sommaire
+16. Câblage HMI
+Les câbles doivent être raccordés au plus court dans l’armoire, les réserves de câbles seront brider sur le montant
+    droit.
+16.1 Les câbles =HM1+OP1-PH1-W1 (sur Display Port) et =HM1+OP1-K1-W5 (sur USB4) doivent être raccordés sur le
+    PC, ils passent dans les canaux et dans la protection en tissu indiqués sur les photos (1).
+
+
+
+
+                                      (1)
+
+                                                                                                              (1)
+
+
+
+
+     V1.0                                           Câblage G05 MOOS                                        112
+                                                                                                     Sommaire
+16. Câblage HMI
+16.2 Le fil =GB1+OP1-W1 doit passer par le canal (1) et se raccorde sur le bornier =GB1-WE2 borne 4 (2).
+
+
+
+
+                                                                                        (1)
+
+
+
+
+                           (2)
+
+
+
+
+     V1.0                                           Câblage G05 MOOS                                       113
+                                                                                    Sommaire
+16. Câblage HMI
+16.3 La suite indique la manière de raccorder les fils à l’interne des armoires.
+16.4 La numérotation sur le fil indique l’emplacement sur lequel il doit être raccordé (1).
+
+
+                                 (3)
+
+
+
+
+                   (1)
+
+16.5 La dernière lettre après les «:» indique la position dans la borne selon le tableau ci-
+   dessous. Le trou de la borne se trouvant à proximité de l’étiquette (2) correspond à la
+   position a. Donc l’emplacement pour l’exemple ci-dessus est le d (sur la gauche (3) de la
+   borne)
+                                                   (2)
+
+
+
+
+     V1.0                       Câblage G05 MOOS                       114
+                                                                                         Sommaire
+16. Câblage HMI
+  16.6 Les fils des câbles restants (=HM1+OP1-G1-W1, =SP1+OP1-W1, =HM1+OP1-W4 & =HM1+OP1-W6) sont à
+        raccorder sur les différentes bornes en fonction du repérage qu’ils portent.
+  16.7 Reprendre les blindages des câbles à l’entrée de l’armoire +A2 selon dessin et photo ci-dessous.
+  16.8 Ne pas reprendre le blindage du câble =HM1+OP1-PH1-W1
+
+
+
+
+  V1.0                                      Câblage G05 MOOS                                    115
+                                                                                                                                          Sommaire
+16. Câblage HMI
+16.8 Mettre au propre les réserves de câble sur les peignes du montant droit.
+
+                            =SP1+OP1-W1
+
+
+                                                        =HM1+OP1-W6
+                                                                      =HM1+OP1-W4
+                                          =GB1+OP1-W1
+  Libre
+           =HM1+OP1-G1-W1
+
+
+
+
+                                                                                    =HM1+OP1-K1-W5
+
+                                                                                                     =HM1+OP1-PH1-W1
+
+
+
+
+          V1.0                                                                                                         Câblage G05 MOOS         116
+                                    Sommaire
+
+
+
+
+            CHAPITRE 17
+
+           Passage de câble
+          Verrouillage porte
+       Capteur sortie convoyeur
+        Sécurité de porte avant
+          Sécurité de tunnel
+
+V1.0             Câblage G05 MOOS         117
+                                                                                                    Sommaire
+17. Passage de câble verrouillage porte, capteur sortie
+convoyeur, sécurité de porte avant et sécurité de tunnel
+17.1 Les câbles =PC1+A2-B1-W1, =SG1+A2-K1-W1 et =SG1+A2-S3-W1 sont en attente dans l’armoire +A2 et doivent
+   sortir du côté du montant droit de la machine (1).
+17.2 Le câble =SG1+A2-K1-W1 de verrouillage de porte doit être raccordé sur le module d’air =SG1+FR1-K1 (2) ne pas
+   brider ce câble dans l’immédiat, il sera bridé ultérieurement.
+
+
+
+
+                                                                                                          (2)
+
+                             (1)
+
+
+
+
+      V1.0                                         Câblage G05 MOOS                                        118
+                                                                                                        Sommaire
+17. Passage de câble verrouillage porte, capteur sortie
+convoyeur, sécurité de porte avant et sécurité de tunnel
+17.3 Les câbles =PC1+A2-B1-W1 et =SG1+A2-S3-W1 vont en position 5 des peignes. Ils doivent mesurer depuis le 3ème
+    peigne:
+- 1000mm pour le câble capteur de sortie convoyeur =PC1+A2-B1-W1
+- 1450mm pour le câble du Schmersal =SG1+A2-S3-W1
+Le surplus est à mettre sur les peignes d’en dessous (1), puis laisser en attente (2) avec le câble du moteur de bande.
+
+
+                                                                                                           (2)
+
+
+
+
+        1      2       3      4      5       6     7        8
+
+
+
+
+                                                                                                       (1)
+
+
+
+
+      V1.0                                             Câblage G05 MOOS                                          119
+                                                                                                    Sommaire
+17. Passage de câble verrouillage porte, capteur sortie
+convoyeur, sécurité de porte avant et sécurité de tunnel
+17.4 Le câble =SG1+FR1-S1-W1 de sécurité de porte est en attente sur le dessus de la machine (1).
+Il doit être raccordé dans l’armoire +A2 CMD.
+
+17.5 Passer le câble comme sur la photo (2).
+
+
+
+
+                                               (1)
+
+
+
+
+                                                                                                      (2)
+
+
+
+
+      V1.0                                           Câblage G05 MOOS                                       120
+                                                                                                 Sommaire
+17. Passage de câble verrouillage porte, capteur sortie
+convoyeur, sécurité de porte avant et sécurité de tunnel
+17.6 Brider les câbles =SG1+A2-K1-W1 & =SG1+FR1-S1-W1 sur les éléments de fixation du montant droit.
+
+
+
+
+     V1.0                                         Câblage G05 MOOS                                     121
+                                                                                                           Sommaire
+17. Passage de câble verrouillage porte, capteur sortie
+convoyeur, sécurité de porte avant et sécurité de tunnel
+17.7 Brider les câbles et faire une boucle de réserve sur le câble du Schmersal (l’autre est trop court) (1).
+
+
+
+
+                                                                                              (1)
+
+
+
+
+      V1.0                                             Câblage G05 MOOS                                          122
+                                                                                              Sommaire
+17. Passage de câble verrouillage porte, capteur sortie
+convoyeur, sécurité de porte avant et sécurité de tunnel
+17.8 Comme expliqué précédemment, le câble =SG1+FR1-S1-W1 du Schmersal de porte doit être raccordé dans
+   l’armoire +A2 CMD.
+
+17.9 Le câble passe dans le canal ci-dessous.
+
+
+
+
+      V1.0                                       Câblage G05 MOOS                                     123
+                                   Sommaire
+
+
+
+
+            CHAPITRE 18
+
+               Câblage
+       Sécurité de porte avant
+
+
+V1.0            Câblage G05 MOOS         124
+                                                                                                       Sommaire
+18. Câblage sécurité de porte avant
+18.1 Le câble =SG1+FR1-S1-W1 passe dans les canaux (1) et doit se raccorder sur la partie droite du bornier (2).
+
+
+
+
+               (1)
+                                                                        (2)
+
+
+
+
+      V1.0                                           Câblage G05 MOOS                                          125
+                                                                                                        Sommaire
+18. Câblage sécurité de porte avant
+
+18.2 Raccourcir le câble, le façonner selon la tabelle ci-dessous (L1 correspond à la longueur de dénudage) puis le
+   raccorder sur les bornes correspondantes.
+
+
+
+
+                                             Version MOOS V8
+
+
+
+
+      V1.0                                            Câblage G05 MOOS                                          126
+                                  Sommaire
+
+
+
+
+         CHAPITRE 19
+
+       Câblage capteur
+       d’entrée palette
+       (Uniquement palette V6)
+
+
+
+V1.0           Câblage G05 MOOS         127
+                                                                                             Sommaire
+19. Câblage capteur d’entrée palette
+Ce câblage est à réaliser uniquement avec des palettes V6, voir avec un responsable.
+
+19.1 Faire des boucles de réserve avec le câble =PC1+FR1-B3 (1).
+
+19.2 Identifier la vanne (2).
+
+
+
+
+                     (1)
+                                                                                       (2)
+
+
+
+
+      V1.0                                          Câblage G05 MOOS                               128
+                                                                                                   Sommaire
+19. Câblage capteur d’entrée palette
+19.3 Prendre un câble 3 pôle avec prise droite (N956.31.73.106). Raccourcir le câble à 750mm, monter un connecteur 3
+   pôles mâle (N956.31.83.411). Il va devenir =PC1+FR1-B3-W1 côté sonde et =AS1-K2-X0 côté vanne.
+
+19.4 Brider le câble le long des tuyaux pneumatique bleu et noir.
+
+
+
+
+     V1.0                                            Câblage G05 MOOS                                     129
+                                                                              Sommaire
+19. Câblage capteur d’entrée palette
+19.5 Le câble doit se raccorder sur la première entrée de la vanne =AS1-K2.
+
+
+
+
+     V1.0                                           Câblage G05 MOOS                130
+                                     Sommaire
+
+
+
+
+            CHAPITRE 20
+
+       Câblage ASi vanne SMC
+          (Uniquement palette V6)
+
+
+
+
+V1.0              Câblage G05 MOOS         131
+                                                                                               Sommaire
+20. Câblage ASi vanne Festo
+Ce câblage est à réaliser uniquement avec des palettes V6, voir avec un responsable.
+20.1 La vanne doit être programmée en 1S2. En profiter pour programmer également les module I/O Siemens
+    dans les armoires +A3 et +A4 en fonction de leur label.
+
+
+
+
+     V1.0                                        Câblage G05 MOOS                                         132
+                                                                                            Sommaire
+20. Câblage ASi vanne Festo
+20.2 Prendre les deux câbles ASi (=AS1+FR1-X2-W1 & =AS1+FR1-X2-W6) livrés avec l’armoire.
+20.3 Les fiches se raccordent sur le support ASi du module MASTER.
+
+
+
+
+     V1.0                                         Câblage G05 MOOS                                133
+                                                                                                        Sommaire
+20. Câblage ASi vanne Festo
+20.4 Passer les câbles au propre dans les canaux à l’intérieur du module et les faire arriver sur la face avant de
+   la machine (1).
+20.5 Les raccorder avec les prises vampires qui sont présentes sur la vanne (2) en alignant le bout des câbles au
+   bout du rail (3).
+
+                                  (1)
+
+
+
+
+   (2)
+
+
+
+
+                                                                                         (3)
+     V1.0                                             Câblage G05 MOOS                                          134
+                                   Sommaire
+
+
+
+
+            CHAPITRE 21
+
+       Montage plaque armoire
+          A2 Commande
+
+
+V1.0            Câblage G05 MOOS         135
+                                                                                                       Sommaire
+21. Montage plaque armoire A2 Commande
+Ce montage de plaque est spécifique au projet, voir avec un responsable si il faut la monter ou non.
+
+21.1 Monter la plaque avec 4 rondelles M6 large (N948.71.00.008) et 4 écrous M6 (N948.00.00.013) (1).
+
+Les plis de la plaque sont en direction du fond de l’armoire (2).
+
+
+
+
+                                  (1)
+
+
+
+
+                                                                                       (2)
+
+
+
+
+      V1.0                                             Câblage G05 MOOS                                      136
+                                  Sommaire
+
+
+
+
+          CHAPITRE 22
+
+        Montage / câblage
+       éléments de sécurité
+
+
+V1.0           Câblage G05 MOOS         137
+                                                                                                     Sommaire
+22. Montage / câblage éléments de sécurité
+22.1 Mettre en place les contacts avec prises sur la porte de l’armoire A2 CMD avec 4 vis M4X16 (N940.20.03.017) (1).
+
+22.2 Raccorder les câbles CBL13102 et CBL13108 (2).
+
+
+
+
+                                                                                                      (2)
+                                                                            (2)
+                 (1)                     (1)
+
+
+
+
+      V1.0                                            Câblage G05 MOOS                                       138
+                                                                                                      Sommaire
+22. Montage / câblage éléments de sécurité
+22.3 Mettre en place les actionneurs avec du scotch carrossier.
+
+Attention, ne pas mettre le scotch sur les étiquettes laser.
+
+             Attention, ce bypasse est réalisé uniquement pour faciliter la future mise en service.
+
+             Ce sont des éléments de sécurité, il est interdit de les bypasser.
+
+
+
+
+      V1.0                                             Câblage G05 MOOS                                     139
+                                                                        Sommaire
+22. Montage / câblage éléments de sécurité
+22.4 Brider les sachets de capuchon sur la porte de l’armoire.
+
+
+
+
+      V1.0                                           Câblage G05 MOOS         140
+                              Sommaire
+
+
+
+
+        CHAPITRE 23
+
+       Documentation
+
+
+
+V1.0       Câblage G05 MOOS         141
+                                                                                                          Sommaire
+  23. Documentation
+  23.1 La documentation machine doit être placée dans l’armoire +A2 CMD.
+  Doit être présent pour une Version MOOS V8:
+Documentation de conformité du sous-   Documentation de la règle Heidenhain
+               traitant                                            Documentation du PC
+                                                                           B&R
+
+
+
+
+                                                                               S49.0194996.01 Set routeur pour
+                                                                                        télémaintenance
+
+     Documentation venant du
+                                            Documentation du
+                HMI
+         V1.0                                 groupe d’air SMC
+                                                     Câblage G05 MOOS                                            142
+                                                                                                       Sommaire
+23. Documentation
+23.2 Préparer les étiquettes type 1 pour les moteurs de bandes et le reste des étiquettes laser dans un sachet.
+
+
+
+
+      V1.0                                           Câblage G05 MOOS                                             143
+                                  Sommaire
+
+
+
+
+           CHAPITRE 24
+
+          Test électrique
+       avant mise en service
+
+
+V1.0           Câblage G05 MOOS         144
+                                                                                                          Sommaire
+24. Test électrique avant mise en service
+24.1 Réaliser le test de mise à la terre à l’aide du document DP 10.9-21_Protective Bonding Check_G05 V8.00 MOOS.
+24.2 Réaliser le test de résistance d’isolation à l’aide du document DP 10.9-22_Insulation Resistance Check_G05 V8.00
+   MOOS.
+24.3 Mettre en place le câble d’alimentation principale sur l’interrupteur =PW1+A1-Q1 (1) en passant à travers le tube
+   d’alimentation. En cas de besoin, ne pas hésiter à utiliser le tir-fil (2) se trouvant dans l’armoire no3 du local ETEC.
+
+
+
+
+                                                                                                              (2)
+
+             (1)
+
+
+
+
+      V1.0                                             Câblage G05 MOOS                                             145
+                                                                                                      Sommaire
+24. Test électrique avant mise en service
+24.4 Réaliser les premiers contrôles machine à l’aide du document DP 08.8-62A_Protocole_réception_Machine_G05
+   V8.00 MOOS_Electrique jusqu’au point 4 du document.
+
+
+
+
+24.5 Réaliser le test de vérifications des courants résiduels à l’aide du document DP 10.9-27_Residual Current Devices
+   Check_G05 V8.00 MOOS.
+
+
+      V1.0                                           Câblage G05 MOOS                                         146
+                                Sommaire
+
+
+
+
+        CHAPITRE 25
+
+       Préparation pour
+        mise en service
+
+
+V1.0         Câblage G05 MOOS         147
+                                                                                         Sommaire
+25. Préparation pour mise en service
+25.1 Régler l’élément de sécurité de porte avant à l’aide des deux vis de réglage (1).
+
+Vert : déverrouillé (2).
+
+Vert / jaune : verrouillé (3).
+
+                                           (1)
+
+
+
+                                                                    (3)
+             (2)
+
+
+
+
+      V1.0                                            Câblage G05 MOOS                         148
+                                                                                     Sommaire
+25. Préparation pour mise en service
+25.2 Mettre en place les filtres d’échappement (1).
+
+25.3 Raccorder le système d’air principal (2).
+
+25.4 Ouvrir la vanne d’air (3).
+                                                                               (3)
+                                          (1)
+
+
+
+
+                                                                         (2)
+
+
+
+
+      V1.0                                            Câblage G05 MOOS                     149
+                                                                        Sommaire
+25. Préparation pour mise en service
+25.5 Ouvrir complètement les deux vannes, sens anti horaire + (1).
+
+25.6 Régler le manomètre de la vanne 6 bars à 6 bars (2).
+
+
+
+
+                                                                         (2)
+
+
+
+
+                             (1)
+
+
+
+
+      V1.0                                           Câblage G05 MOOS          150
+                                                                                                              Sommaire
+25. Préparation pour mise en service
+25.7 Régler le capteur de pression Festo à l’aide du document suivant : Instruction réglage capteur pression SPAN
+   présent sous : V:\MBO\departments\030 Engineering and Customer Project\046 Function ET\020
+   Share\011_Mise_en_service_SPA\Procédures Mise en service SPA\020 G05\G05 V6.1 AB US\Trucs et astuces\Réglage pressostat
+
+
+
+
+25.8 La machine est maintenant prête pour la mise en service qui est à réaliser avec le document suivant : AB PLC - Std
+   Cell Setup Procedure - G05v610 AB70028 - V1.09.
+
+
+      V1.0                                              Câblage G05 MOOS                                              151
+                                   Sommaire
+
+
+
+
+            CHAPITRE 7
+
+       Emplacement étiquettes
+               laser
+
+
+V1.0            Câblage G05 MOOS         152
+                                                                                                      Sommaire
+7. Emplacement étiquettes laser
+7.1 Ce chapitre montre l’emplacement des étiquettes laser sur la cellule.
+Pour rappel, selon IT10-02_Standard electrique cablage MBO, il y a une étiquette par élément à coller sur le support de
+    l’élément et non pas sur l’élément directement. La seule exception concerne les éléments se trouvant derrière une
+    tôle de fermeture, dans ce cas, on rajoute une deuxième étiquette sur la tôle de fermeture.
+Attention, la surface sur laquelle l’étiquette va venir se coller doit être propre et exempt de graisse. Les chiffons se
+    trouvent dans les armoires 5S disposées dans la halle et les bonbonnes de dégraissant se trouvent sur l’étagère en
+    face de l’infirmerie.
+7.2 Le jeu d’étiquette est fourni par un responsable.
+
+
+
+
+     V1.0                                            Câblage G05 MOOS                                         153
+                                                                                   Sommaire
+  7. Emplacement étiquettes laser
+  7.3 Numéros d’armoires (+A1, +A2, +A3, +A4 (Version 2M) & +OP1)
+
+
+                                                                                  +OP1
+
+                       +A1
+
+
+                                                                      +A2
+
+
+
+Ajouter
+autocollant
+danger
+électrique
+                                  +A3
+                                                                            +A4
+
+
+
+
+        V1.0                                       Câblage G05 MOOS                      154
+                                                                                           Sommaire
+7. Emplacement étiquettes laser
+7.5 Lampe cellule (=CL1+FR1-P1)
+7.6 Moteurs de bande, si installés, sinon mettre de côté (=CM1+C01-M1, =CM2+C01-M1, =CM3+C01-M1 & =CM4+C01-
+    M1)
+
+
+
+
+                     =CL1+FR1-P1
+
+
+
+
+     V1.0                                      Câblage G05 MOOS                                   155
+                                                                                   Sommaire
+7. Emplacement étiquettes laser
+7.7 Encodeur came (=EM1+FR1-B1)
+7.8 Plaquettes de terre (=GB1+FR1-WE1, =GB1+FR1-WE2 & =GB1+FR1-WE3 (Version 2M))
+
+                                          Frame armoire Master
+                                          =GB1+FR1-WE2
+   =EM1+FR1-B1
+
+
+
+
+                                           Frame armoire Slave
+                                           =GB1+FR1-WE3
+   =GB1+FR1-WE1
+
+
+
+
+         V1.0                                  Câblage G05 MOOS                          156
+                                                                                                  Sommaire
+7. Emplacement étiquettes laser
+7.9 Moteur d’entrainement principal (=MM1+FR1-M1)
+7.10 Sondes de gestion de bande, si installés, sinon mettre de côté (=PC1+FR1-B1, =PC1+FR1-B2, =PC1+FR1-B3 &
+   =PC1+FR1-B4)
+                =MM1+FR1-M1                                   =PC1+FR1-B1       =PC1+FR1-B3
+
+
+
+
+     V1.0                                         Câblage G05 MOOS                                       157
+                                                                                           Sommaire
+7. Emplacement étiquettes laser
+7.11 Lecteur de Tag Balluff (=PI1+FR1-B1)
+7.12 Equerre des prises d’alimentation 230VAC (=PR1+FR1-X1 & =PR2+FR1-X1 (Version 2M))
+
+
+
+
+=PI1+FR1-B1                                                                         =PR2+FR1-X1
+
+
+
+
+     V1.0                                        Câblage G05 MOOS                                 158
+                                                                                                    Sommaire
+ 7. Emplacement étiquettes laser
+ 7.13 Groupe pneumatique SMC (=SA1+FR1-B1, =SA1+FR1-K1 & =SA1+FR1-K2)
+ 7.14 Contrôle de sécurité Schmersal, si installés, sinon mettre de côté (=SG1+C01-S2, =SG1+C01-S3, =SG1+FR1-K1,
+    =SG1+FR1-S1, =SG2+FR1-S1 & =SG2+FR1-S2 (Version 2M))
+
+
+             =SA1+FR1-B1
+
+
+
+
+=SA1+FR1-K2            =SA1+FR1-K1                 =SG1+FR1-K1                =SG1+FR1-S1
+
+
+
+
+      V1.0                                          Câblage G05 MOOS                                        159
+                                                                              Sommaire
+7. Emplacement étiquettes laser
+7.15 Règle de mesure linéaire Heidenhain (=TM1+FR1-B1)
+7.16 Moteur transfert linéaire LinMot (=TM1+FR1-M1)
+
+
+
+
+                       =TM1+FR1-B1                                  =TM1+FR1-M1
+
+
+
+
+     V1.0                                        Câblage G05 MOOS                   160
+                                    Sommaire
+
+
+
+
+            CHAPITRE 26
+
+       Test, contrôle et finition
+        après mise en service
+
+
+V1.0             Câblage G05 MOOS         161
+                                                                                                   Sommaire
+26. Test, contrôle et finition après mise en service
+26.1 Réaliser la suite des contrôles machine après Master Start à l’aide du document DP 08.8-
+   62A_Protocole_réception_Machine_G05 V8.00 MOOS_Electrique.
+
+La machine doit fonctionner en auto pour les mesures sur les connecteurs 230VAC.
+
+
+
+26.2 Réaliser le test de tension résiduelle à l’aide du document DP 10.9-28_Residual Voltage Check_G05 V8 MOOS.
+
+26.3 Vérifier la propreté du câblage et la fermeture des canaux.
+
+
+
+
+      V1.0                                           Câblage G05 MOOS                                     162
+                                                                       Sommaire
+26. Test, contrôle et finition après mise en service
+26.4 Mettre en place la tôle du boitier HMI (1).
+
+Cette tôle est à monter après le contrôle 10% de la machine.
+
+
+
+
+                                                            (1)
+
+
+
+
+      V1.0                                          Câblage G05 MOOS         163
+
