@@ -5,44 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Checklist Matériel G05</title>
+    <link rel="icon" href="{{ asset('images/logo.png') }}" type="image/x-icon">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
+<style>
+.logo {
+    max-width: 150px;
+    margin: 0 auto;
+    display: block;
+}
+        .logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+    </style>
 <body class="bg-gray-100">
+
     <div id="app" class="container mx-auto px-4 py-8 max-w-6xl">
         <div class="bg-white rounded-lg shadow-lg p-6">
+        <div class="logo-container">
+        <img src="{{ asset('images/logo.png') }}" style="border-radius:50%"  alt="Company Logo" class="logo">
+    </div>
             <h1 class="text-3xl font-bold mb-6 text-center text-gray-800">Vérification du Matériel G05</h1>
 
             <!-- Informations utilisateur -->
             <div class="mb-8 bg-gray-50 p-6 rounded-lg">
                 <h2 class="text-xl font-semibold mb-4 text-gray-700">Informations</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="userName">
-                            Votre nom
-                        </label>
-                        <input 
-                            type="text" 
-                            id="userName" 
-                            v-model="userName"
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            placeholder="Entrez votre nom"
-                        >
-                    </div>
-                    <div>
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="recipientEmail">
-                            Email du destinataire
-                        </label>
-                        <input 
-                            type="email" 
-                            id="recipientEmail" 
-                            v-model="recipientEmail"
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            placeholder="email@example.com"
-                        >
-                    </div>
-                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <!-- User Name Field -->
+    <div>
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="userName">
+            Votre nom
+        </label>
+        <input 
+            type="text" 
+            id="userName" 
+            v-model="userName"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="Entrez votre nom"
+        >
+    </div>
+
+    <!-- Recipient Email Field -->
+    <div>
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="recipientEmail">
+            Email du destinataire
+        </label>
+        <input 
+            type="email" 
+            id="recipientEmail" 
+            v-model="recipientEmail"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="email@example.com"
+        >
+    </div>
+
+    <!-- Machine Name Field -->
+    <div>
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="machineName">
+            Nom de la machine
+        </label>
+        <input 
+            type="text" 
+            id="machineName" 
+            v-model="machineName"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="Entrez le nom de la machine"
+        >
+    </div>
+</div>
+
             </div>
 
             <!-- Statistiques -->
@@ -65,13 +100,40 @@
                 </div>
             </div>
 
+
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-gray-700 bg-gray-50 p-3 rounded">Controle visuel des armoires</h3>
+                <div class="space-y-4">
+                    @foreach($vis_control_ar as $key => $vca)
+                    <div 
+                         class="{'bg-white border rounded-lg p-4 hover:shadow-md transition-shadow': true,
+                                 'border-green-500 bg-green-50'}">
+                        <div class="flex items-start space-x-4">
+                            
+                            <div class="flex-grow">
+                                <div class="font-semibold text-gray-800">{{ $vca['name'] }}</div>
+                                <div class="text-sm text-gray-600 mt-1">{{ $vca['description'] }}</div>
+                                <textarea 
+                                    name="commentAr[]"
+                                    placeholder="Commentaire"
+                                    class="mt-2 w-full p-2 border rounded text-sm focus:outline-none focus:ring-1 focus:ring-green-500 border-green-200"
+                                    rows="2"
+                                ></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+
+
             <!-- Liste des composants par catégorie -->
             <div v-for="category in categories" :key="category" class="mb-8">
                 <h3 class="text-xl font-semibold mb-4 text-gray-700 bg-gray-50 p-3 rounded">@{{ category }}</h3>
                 <div class="space-y-4">
                     <div v-for="item in itemsByCategory(category)" :key="item.name" 
                          :class="{'bg-white border rounded-lg p-4 hover:shadow-md transition-shadow': true,
-                                 'border-green-500 bg-green-50': item.is_present,
+                                 'border-green-500 bg-green-50': item.is_present && item.comment,
                                  'border-red-300': !item.is_present && item.comment}">
                         <div class="flex items-start space-x-4">
                             <div class="flex-none w-24">
@@ -92,6 +154,13 @@
                                     v-model="item.comment"
                                     placeholder="Expliquez pourquoi ce composant est manquant..."
                                     class="mt-2 w-full p-2 border rounded text-sm focus:outline-none focus:ring-1 focus:ring-red-500 border-red-200"
+                                    rows="2"
+                                ></textarea>
+                                <textarea 
+                                    v-if="item.is_present"
+                                    v-model="item.comment"
+                                    placeholder="Un commentaire sur cet élément?"
+                                    class="mt-2 w-full p-2 border rounded text-sm focus:outline-none focus:ring-1 focus:ring-green-500 border-green-200"
                                     rows="2"
                                 ></textarea>
                             </div>
@@ -210,7 +279,9 @@
                         const formData = {
                             user_name: this.userName,
                             recipient_email: this.recipientEmail,
-                            items: this.items
+                            items: this.items,
+                            machineName: this.machineName,
+                            commentAr: Array.from(document.querySelectorAll('textarea[name="commentAr[]"]')).map(textarea => textarea.value) // Collects all commentAr[] values
                         };
 
                         // Envoi de la requête

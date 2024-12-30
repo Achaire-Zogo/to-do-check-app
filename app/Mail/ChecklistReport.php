@@ -5,6 +5,7 @@ namespace App\Mail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Storage;
 
 class ChecklistReport extends Mailable
 {
@@ -17,8 +18,11 @@ class ChecklistReport extends Mailable
     public $missingItems;
     public $itemsWithComments;
     public $categorizedItems;
+    public $commentAr;
+    public $pdfPath;
+    public $machineName;
 
-    public function __construct($data)
+    public function __construct($data, $cmtAr,$pdfpath)
     {
         $this->userName = $data['userName'];
         $this->date = $data['date'];
@@ -26,12 +30,20 @@ class ChecklistReport extends Mailable
         $this->presentItems = $data['presentItems'];
         $this->missingItems = $data['missingItems'];
         $this->itemsWithComments = $data['itemsWithComments'];
+        $this->machineName = $data['machineName'];
         $this->categorizedItems = $data['categorizedItems'];
+        $this->commentAr = $cmtAr;
+        $this->pdfPath = $pdfpath;
     }
 
     public function build()
     {
         return $this->subject('Rapport de Vérification Matériel G05')
-                    ->view('emails.checklist-report');
+                    ->view('emails.checklist-report')
+                    ->attach($this->pdfPath, [
+                        'as' => 'checklist_report.pdf',
+                        'mime' => 'application/pdf',
+                    ])
+                    ;
     }
 }

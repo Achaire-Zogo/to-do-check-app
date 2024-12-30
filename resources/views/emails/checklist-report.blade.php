@@ -14,9 +14,24 @@
             padding: 20px;
         }
         .header {
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             margin-bottom: 30px;
         }
+        .logo {
+    max-width: 150px;
+    margin: 0 auto;
+    display: block;
+}
+        .header-text {
+            text-align: center;
+            flex: 1;
+        }
+        .logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
         .summary {
             background-color: #f8f9fa;
             padding: 15px;
@@ -55,6 +70,11 @@
             color: #dc3545;
             margin-top: 5px;
         }
+        .present-item-comment {
+            font-style: italic;
+            color: #d4edda;
+            margin-top: 5px;
+        }
         .stats {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -71,8 +91,16 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Rapport de Vérification Matériel G05</h1>
-            <p>Généré par: {{ $userName }} le {{ $date }}</p>
+            <!-- Logo on the Left -->
+            <div class="logo-container">
+        <img src="{{ public_path('images/logo.png') }}" style="border-radius:50%" width="50px" height="50px" alt="Company Logo" class="logo">
+    </div>
+            <!-- Header Text in the Center -->
+            <div class="header-text">
+                <h1>Rapport de Vérification Matériel G05</h1>
+                <h3>Nom du projet (machine): {{$machineName}}</h3>
+                <p>Généré par: {{ $userName }} le {{ $date }}</p>
+            </div>
         </div>
 
         <div class="summary">
@@ -92,6 +120,13 @@
                 </div>
             </div>
         </div>
+        <div class="item present">
+                <div class="item-name">Controle visuel des armoires</div>
+                <div class="item-description"><b>Armoire A1</b> (Commentaire: {{$commentAr[0]}})</div>
+                <div class="item-description"><b>Armoire A2</b> (Commentaire: {{$commentAr[1]}})</div>
+                <div class="item-description"><b>Armoire A3</b> (Commentaire: {{$commentAr[2]}})</div>
+                <div class="item-description"><b>Armoire A4</b> (Commentaire: {{$commentAr[3]}})</div>
+            </div>
 
         @foreach($categorizedItems as $category => $categoryStats)
         <div class="category">
@@ -109,6 +144,11 @@
                 <div class="item-description">{{ $item['description'] }}</div>
                 @if(!$item['is_present'] && isset($item['comment']) && $item['comment'])
                     <div class="item-comment">
+                        Commentaire: {{ $item['comment'] }}
+                    </div>
+                @endif
+                @if($item['is_present'] && isset($item['comment']) && $item['comment'])
+                    <div class="present-item-comment">
                         Commentaire: {{ $item['comment'] }}
                     </div>
                 @endif
