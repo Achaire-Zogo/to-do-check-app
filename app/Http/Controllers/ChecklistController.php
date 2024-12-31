@@ -44,7 +44,7 @@ class ChecklistController extends Controller
             ],
         ];
         $items = [
-            
+           
             // Composants Électriques
             [
                 'category' => 'Composants Électriques',
