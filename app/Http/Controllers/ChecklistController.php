@@ -48,81 +48,85 @@ class ChecklistController extends Controller
             // Composants Électriques
             [
                 'category' => 'Composants Électriques',
-                'name' => 'Câble terre GB1+FL1-W5',
-                'description' => 'Câble de terre pour connexion à la plaque de cuivre du module 2',
+                'name' => 'Colonne lumineuse',
+                'description' => 'Colonne lumineuse Pour HMI',
                 'is_present' => false
             ],
             [
                 'category' => 'Composants Électriques',
-                'name' => 'Câble terre GB1+FL1-W2',
-                'description' => 'Câble de terre pour connexion à la barre de cuivre principale',
+                'name' => ' Sécurité de porte avant',
+                'description' => 'Capteur  sécurité de porte avant Schermersal',
                 'is_present' => false
             ],
             [
                 'category' => 'Composants Électriques',
-                'name' => 'Câble AS1+A2-W3',
-                'description' => 'Câble pour armoire +A3 MASTER, longueur 600mm',
+                'name' => 'Sécurité porte arrière',
+                'description' => 'Capteur  sécurité de portes arrières Schermersal',
                 'is_present' => false
             ],
             [
                 'category' => 'Composants Électriques',
-                'name' => 'Câble AS1+A2-W4',
-                'description' => 'Câble pour armoire +A3 MASTER',
+                'name' => 'Câble alimentation',
+                'description' => 'Câble alimentation armoire A1+',
                 'is_present' => false
             ],
             [
                 'category' => 'Composants Électriques',
-                'name' => 'Câble CC1+A2-W1',
-                'description' => 'Câble pour armoire +A3 MASTER',
-                'is_present' => false
-            ],
-
-            // Composants Armoire SLAVE
-            [
-                'category' => 'Armoire SLAVE',
-                'name' => 'Câble AS2+A2-W3',
-                'description' => 'Câble ASi pour armoire +A4 SLAVE, longueur 600mm',
+                'name' => 'équerre AS-i dans modules ',
+                'description' => 'équerre AS-i dans modules ',
                 'is_present' => false
             ],
             [
-                'category' => 'Armoire SLAVE',
-                'name' => 'Câble AS2+A2-W4',
-                'description' => 'Câble pour armoire +A4 SLAVE',
+                'category' => 'Composants Électriques',
+                'name' => 'Câble terres ',
+                'description' => 'Câble Terre pour ensemble machine controle de la présence de tous les cables standards ',
                 'is_present' => false
             ],
             [
-                'category' => 'Armoire SLAVE',
-                'name' => 'Câble CC1+A2-W2',
-                'description' => 'Câble pour armoire +A4 SLAVE, longueur 660mm',
+                'category' => 'Composants Électriques',
+                'name' => 'Lampe avant Machine',
+                'description' => 'Lampe avant Machine éclairage cellules',
+                'is_present' => false
+            ],
+            [
+                'category' => 'Composants Électriques',
+                'name' => 'Switch principal et filtre A1',
+                'description' => 'Switch principal et filtre A1 ',
+                'is_present' => false
+            ],
+            [
+                'category' => 'Composants Électriques',
+                'name' => 'Câbles descente montant gauche venant A2 ',
+                'description' => 'Câbles descente montant gauche venant A2 ',
+                'is_present' => false
+            ],
+            [
+                'category' => 'Composants Électriques',
+                'name' => 'Câbles descente montant droite venant A2 ',
+                'description' => 'Câbles descente montant droite venant A2 ',
+                'is_present' => false
+            ],
+            [
+                'category' => 'Composants Électriques',
+                'name' => 'HMI',
+                'description' => 'HMI controle câbles et HMI',
+                'is_present' => false
+            ],
+            [
+                'category' => 'Composants Électriques',
+                'name' => 'Chaine HMI',
+                'description' => 'Chaine passage câble HMI',
                 'is_present' => false
             ],
 
             // Composants Mécaniques
             [
                 'category' => 'Composants Mécaniques',
-                'name' => 'Support ASi',
-                'description' => 'Support pour module ASi',
+                'name' => 'Supports ASi Frontal',
+                'description' => 'Support pour module ASi avant machine',
                 'is_present' => false
             ],
-            [
-                'category' => 'Composants Mécaniques',
-                'name' => 'Vis M5x10',
-                'description' => 'Vis pour fixation équerre alimentation 230VAC',
-                'is_present' => false
-            ],
-            [
-                'category' => 'Composants Mécaniques',
-                'name' => 'Rondelles M5',
-                'description' => 'Rondelles pour fixation équerre alimentation 230VAC',
-                'is_present' => false
-            ],
-            [
-                'category' => 'Composants Mécaniques',
-                'name' => 'Équerre alimentation 230VAC',
-                'description' => 'Support pour alimentation principale',
-                'is_present' => false
-            ],
-
+        
             // Composants Pneumatiques
             [
                 'category' => 'Composants Pneumatiques',
@@ -174,27 +178,7 @@ class ChecklistController extends Controller
                 'description' => 'Filtre pour switch principal',
                 'is_present' => false
             ],
-
-            // Interface HMI
-            [
-                'category' => 'Interface HMI',
-                'name' => 'Câble HDMI HM1+OP1-PH1-W1',
-                'description' => 'Câble HDMI pour connexion écran',
-                'is_present' => false
-            ],
-            [
-                'category' => 'Interface HMI',
-                'name' => 'Câble USB HM1+OP1-K1-W5',
-                'description' => 'Câble USB pour connexion interface',
-                'is_present' => false
-            ],
-            [
-                'category' => 'Interface HMI',
-                'name' => 'Lampe CL1+FR1-P1',
-                'description' => 'Lampe de signalisation',
-                'is_present' => false
-            ],
-
+            
             // Capteurs et Sondes
             [
                 'category' => 'Capteurs et Sondes',
