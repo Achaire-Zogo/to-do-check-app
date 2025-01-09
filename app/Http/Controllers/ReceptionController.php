@@ -220,34 +220,44 @@ class ReceptionController extends Controller
                 ]);
             }
 
-            // Generate PDF
-            $pdfFileName = 'reception_form_' . $form->id . '_' . now()->format('Y-m-d_His') . '.pdf';
-            $pdfPath = 'pdfs/' . $pdfFileName;
-            $fullPdfPath = public_path($pdfPath);
+             // Generate PDF
+             $pdfFileName = 'reception_form_' . $form->id . '_' . now()->format('Y-m-d_His') . '.pdf';
+             $pdfPath = 'pdfs/' . $pdfFileName;
 
-            // Prepare data for PDF and email
-            $data = [
-                'form' => $form,
-                'items' => $form->items->groupBy('category'),
-                'project' => $form->project,
-                'check_date' => $form->check_date,
-                'stamp_number' => $form->stamp_number,
-                'check_roadmap' => $form->check_roadmap,
-                'check_schemas' => $form->check_schemas,
-                'check_etiquette' => $form->check_etiquette,
-                'receiver_email' => $form->receiver_email,
-                'signature_performer' => $form->signature_performer,
-                'signature_witness' => $form->signature_witness,
-                'signature_reviewer' => $form->signature_reviewer,
-                'signature_image' => $form->signature_image,
-                'missing_parts' => $form->missing_parts,
-                'unmounted_parts' => $form->unmounted_parts,
-                'submitted_at' => $form->submitted_at,
-            ];
+             // Fetch the items for this form
+             $items = ReceptionItem::where('reception_form_id', $form->id)->get();
 
-            // Generate and save PDF
-            $pdf = PDF::loadView('pdf.reception-form', $data);
-            $pdf->save($fullPdfPath);
+             $fullPdfPath = public_path($pdfPath);
+
+             // Prepare data for PDF and email
+             $data = [
+                 'project' => $form->project,
+                 'submitted_at' => $form->submitted_at->format('d.m.Y'),
+                 'check_date' => $form->submitted_at,
+                 'stamp_number' => $form->stamp_number,
+                 'check_roadmap' => $form->check_roadmap,
+                 'check_schemas' => $form->check_schemas,
+                 'check_etiquette' => $form->check_etiquette,
+                 'items' => $items->map(function($item) {
+                     return [
+                         'category' => $item->category,
+                         'description' => $item->name,
+                         'status' => $item->status,
+                         'comment' => $item->comment
+                     ];
+                 })->toArray(),
+                 'missing_parts' => $form->missing_parts,
+                 'unmounted_parts' => $form->unmounted_parts,
+                 'result_summary' => '',
+                 'signature_performer' => $form->signature_performer,
+                 'signature_image' => $form->signature_image ? base64_encode(Storage::get('public/' . $form->signature_image)) : null,
+                 'signature_witness' => $form->signature_witness,
+                 'signature_reviewer' => $form->signature_reviewer
+             ];
+
+             // Generate PDF
+             $pdf = PDF::loadView('pdf.reception-form', compact('data'));
+             $pdf->save($fullPdfPath);
 
             // Prepare comment array for email
             $commentArray = $form->items->groupBy('category')->map(function ($items) {

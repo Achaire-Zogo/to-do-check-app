@@ -1,111 +1,264 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="UTF-8">
+    <title>Checklist Reception Machine</title>
     <style>
-        body { font-family: DejaVu Sans, sans-serif; }
-        .header { display: flex; justify-content: space-between; margin-bottom: 20px; }
-        .logo { height: 50px; }
-        .title { text-align: center; font-size: 24px; margin: 20px 0; }
-        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
-        .info-item { margin-bottom: 10px; }
-        .label { font-weight: bold; }
-        .category { background: #f3f4f6; padding: 10px; margin: 15px 0; font-weight: bold; }
-        .item { margin: 10px 0; padding: 10px; border: 1px solid #e5e7eb; }
-        .item-header { display: flex; justify-content: space-between; }
-        .status { font-weight: bold; }
-        .status-ok { color: green; }
-        .status-nok { color: red; }
-        .comment { font-style: italic; color: #666; margin-top: 5px; }
-        .signature-section { margin-top: 30px; }
-        .signature-image { max-width: 200px; margin-top: 10px; }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+        }
+        .header {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        .header img {
+            max-width: 150px;
+        }
+        .header-right {
+            float: right;
+            text-align: right;
+        }
+        .form-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .project-info {
+            margin-bottom: 20px;
+        }
+        .project-info div {
+            margin-bottom: 10px;
+        }
+        .checklist-item {
+            margin-bottom: 5px;
+        }
+        .status-box {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            padding: 5px;
+            vertical-align: top;
+        }
+        .status-ok {
+            background-color: #155724;
+            font-weight: bold;
+        }
+        .status-nok {
+            background-color: #721c24;
+            font-weight: bold;
+        }
+        .signature-section {
+            margin-top: 30px;
+        }
+        .signature-row {
+            margin-bottom: 20px;
+        }
+        .signature-box {
+            border-bottom: 1px solid #000;
+            min-height: 40px;
+            margin-top: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 5px;
+            vertical-align: top;
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <img src="{{ public_path('images/logo.png') }}" alt="Logo" class="logo">
-        <div>
+        <img src="{{ public_path('images/mikron-logo.png') }}" alt="Mikron">
+        <div class="header-right">
             <div>DP 07.3-12e</div>
             <div>V1.0</div>
         </div>
-    </div>
-
-    <h1 class="title">Formulaire de Réception</h1>
-
-    <div class="info-grid">
-        <div class="info-item">
-            <span class="label">Projet:</span>
-            <span>{{ $form->project }}</span>
-        </div>
-        <div class="info-item">
-            <span class="label">Email du receveur:</span>
-            <span>{{ $form->receiver_email }}</span>
-        </div>
-        <div class="info-item">
-            <span class="label">Numéro de timbrage:</span>
-            <span>{{ $form->stamp_number }}</span>
-        </div>
-        <div class="info-item">
-            <span class="label">Date de vérification:</span>
-            <span>{{ $form->check_date->format('d/m/Y') }}</span>
-        </div>
-        <div class="info-item">
-            <span class="label">Date de soumission:</span>
-            <span>{{ $form->submitted_at->format('d/m/Y H:i') }}</span>
+        <div style="clear: both;"></div>
+        <div style="text-align: center; margin-top: 20px;">
+            <div>Project Management</div>
+            <div>Etec Standard G05</div>
+            <div>Wiring Prerequisites Checklist</div>
         </div>
     </div>
 
-    @foreach($items as $category => $categoryItems)
-        <div class="category">{{ $category }}</div>
-        @foreach($categoryItems as $item)
-            <div class="item">
-                <div class="item-header">
-                    <div>
-                        <strong>{{ $item->name }}</strong>
-                        @if($item->description)
-                            <div>{{ $item->description }}</div>
-                        @endif
-                    </div>
-                    <div class="status status-{{ $item->status }}">
-                        {{ strtoupper($item->status) }}
-                    </div>
+    <div class="form-title">
+        Checklist Reception Machine pour câblage standard
+    </div>
+
+    <div class="project-info">
+        <table>
+            <tr>
+                <td width="200">Projet</td>
+                <td>: {{ $data['project'] }}</td>
+            </tr>
+            <tr>
+                <td>Date du Check</td>
+                <td>: {{ $data['submitted_at'] }}</td>
+            </tr>
+            <tr>
+                <td>Check Roadmap</td>
+                <td>: <span class="{{ $data['check_roadmap'] === 'OK' ? 'status-ok' : 'status-nok' }}">{{ $data['check_roadmap'] }}</span></td>
+            </tr>
+            <tr>
+                <td>Check Numéro de timbrage</td>
+                <td>: {{ $data['stamp_number'] }}</td>
+            </tr>
+            <tr>
+                <td>Check Schémas Eplan</td>
+                <td>: <span class="{{ $data['check_schemas'] === 'OK' ? 'status-ok' : 'status-nok' }}">{{ $data['check_schemas'] }}</span></td>
+            </tr>
+            <tr>
+                <td>Check Étiquette standard</td>
+                <td>: <span class="{{ $data['check_etiquette'] === 'OK' ? 'status-ok' : 'status-nok' }}">{{ $data['check_etiquette'] }}</span></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="checklist-section">
+        <div style="margin-bottom: 20px;">
+            <strong>Controle visuel des armoires</strong>
+            @foreach($data['items'] as $item)
+                @if($item['category'] === 'Controle visuel des armoires')
+                <div class="checklist-item">
+                    <table>
+                        <tr>
+                            <td width="70%">: {{ $item['description'] }}</td>
+                            <td class="{{ $item['status'] === 'ok' ? 'status-ok' : 'status-nok' }}">
+                                {{ $item['status'] }}
+                            </td>
+                        </tr>
+                    </table>
                 </div>
-                @if($item->comment)
-                    <div class="comment">{{ $item->comment }}</div>
                 @endif
-            </div>
-        @endforeach
-    @endforeach
+            @endforeach
+        </div>
 
-    @if($form->missing_parts)
-        <div class="category">Pièces Manquantes</div>
-        <div class="item">{{ $form->missing_parts }}</div>
-    @endif
 
-    @if($form->unmounted_parts)
-        <div class="category">Pièces non montées</div>
-        <div class="item">{{ $form->unmounted_parts }}</div>
-    @endif
+        <div style="margin-bottom: 20px;">
+            <strong>HMI</strong>
+            @foreach($data['items'] as $item)
+                @if($item['category'] === 'HMI')
+                <div class="checklist-item">
+                    <table>
+                        <tr>
+                            <td width="70%">: {{ $item['description'] }}</td>
+                            <td class="{{ $item['status'] === 'ok' ? 'status-ok' : 'status-nok' }}">
+                                {{ $item['status'] }}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                @endif
+            @endforeach
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <strong>Chaine HMI</strong>
+            @foreach($data['items'] as $item)
+                @if($item['category'] === 'Chaine HMI')
+                <div class="checklist-item">
+                    <table>
+                        <tr>
+                            <td width="70%">: {{ $item['description'] }}</td>
+                            <td class="{{ $item['status'] === 'ok' ? 'status-ok' : 'status-nok' }}">
+                                {{ $item['status'] }}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                @endif
+            @endforeach
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <strong>Carton fournisseur</strong>
+            @foreach($data['items'] as $item)
+                @if($item['category'] === 'Carton fournisseur')
+                <div class="checklist-item">
+                    <table>
+                        <tr>
+                            <td width="70%">: {{ $item['description'] }}</td>
+                            <td class="{{ $item['status'] === 'ok' ? 'status-ok' : 'status-nok' }}">
+                                {{ $item['status'] }}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                @endif
+            @endforeach
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <strong>Vérine</strong>
+            @foreach($data['items'] as $item)
+                @if($item['category'] === 'Vérine')
+                <div class="checklist-item">
+                    <table>
+                        <tr>
+                            <td width="70%">: {{ $item['description'] }}</td>
+                            <td class="{{ $item['status'] === 'ok' ? 'status-ok' : 'status-nok' }}">
+                                {{ $item['status'] }}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                @endif
+            @endforeach
+        </div>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <strong>Check Pièces Manquante</strong>
+        <div>: {{ $data['missing_parts'] ?: '-' }}</div>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <strong>Check Pièces non montée</strong>
+        <div>: {{ $data['unmounted_parts'] ?: '-' }}</div>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <strong>Result Summary</strong>
+        <div>: {{ $data['result_summary'] ?: '-' }}</div>
+    </div>
 
     <div class="signature-section">
-        <div class="info-grid">
-            <div class="info-item">
-                <div class="label">Performed by:</div>
-                <div>{{ $form->signature_performer }}</div>
-                @if($form->signature_image)
-                    <img src="{{ storage_path('app/public/' . $form->signature_image) }}" 
-                         alt="Signature" class="signature-image">
-                @endif
-            </div>
-            <div class="info-item">
-                <div class="label">Witnessed by:</div>
-                <div>{{ $form->signature_witness }}</div>
-            </div>
-            <div class="info-item">
-                <div class="label">Reviewed by:</div>
-                <div>{{ $form->signature_reviewer }}</div>
-            </div>
-        </div>
+        <table style="width: 100%;">
+            <tr>
+                <td style="width: 100px;">Performed by</td>
+                <td>: {{ $data['signature_performer'] }}</td>
+                <td>Signature:</td>
+                <td>
+                    @if($data['signature_image'])
+                        <img src="data:image/png;base64,{{ $data['signature_image'] }}" style="max-height: 50px;">
+                    @endif
+                </td>
+                <td>Date {{ $data['submitted_at'] }}</td>
+            </tr>
+            <tr>
+                <td>Witnessed by</td>
+                <td>: {{ $data['signature_witness'] ?: '________________' }}</td>
+                <td>Signature:</td>
+                <td>________________</td>
+                <td>Date ________________</td>
+            </tr>
+            <tr>
+                <td>Reviewed by</td>
+                <td>: {{ $data['signature_reviewer'] ?: '________________' }}</td>
+                <td>Signature:</td>
+                <td>________________</td>
+                <td>Date ________________</td>
+            </tr>
+        </table>
+    </div>
+
+    <div style="text-align: right; margin-top: 20px;">
+        Page 1/1
     </div>
 </body>
 </html>

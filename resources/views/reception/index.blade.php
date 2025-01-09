@@ -8,8 +8,39 @@
     <link rel="icon" href="{{ asset('images/logo.png') }}" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        .loader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            display: none;
+        }
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 5px solid #3498db;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body class="bg-gray-50">
+    <!-- Loader -->
+    <div class="loader-container" id="loader">
+        <div class="loader"></div>
+    </div>
     <div id="receptionForm" class="container px-4 py-8 mx-auto">
         <div class="p-6 mb-8 bg-white rounded-lg shadow-lg">
             <!-- En-tête -->
@@ -203,6 +234,9 @@
             $('#reception-form').submit(function(e) {
                 e.preventDefault();
 
+                // Afficher le loader
+                $('#loader').show();
+
                 // Récupération des données du formulaire
                 const formData = new FormData(this);
 
@@ -227,7 +261,7 @@
                     }
                 });
 
-                // Conversion du tableau associatif en tableau simple
+                // Nettoyage et formatage des items
                 jsonData.items = Object.values(items);
 
                 // Envoi des données
@@ -236,13 +270,16 @@
                     method: 'POST',
                     data: JSON.stringify(jsonData),
                     contentType: 'application/json',
-                    processData: false,
                     success: function(response) {
-                        alert('Formulaire soumis avec succès !');
+                        // Cacher le loader
+                        $('#loader').hide();
+                        alert('Formulaire enregistré avec succès!');
                         window.location.reload();
                     },
                     error: function(xhr, status, error) {
-                        alert('Erreur lors de la soumission du formulaire : ' + error);
+                        // Cacher le loader
+                        $('#loader').hide();
+                        alert('Erreur lors de l\'enregistrement du formulaire: ' + error);
                     }
                 });
             });
