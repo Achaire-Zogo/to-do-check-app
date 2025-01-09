@@ -43,11 +43,11 @@
             vertical-align: top;
         }
         .status-ok {
-            background-color: #155724;
+            background-color: #17DD45FF;
             font-weight: bold;
         }
         .status-nok {
-            background-color: #721c24;
+            background-color: #E31126FF;
             font-weight: bold;
         }
         .signature-section {
