@@ -173,6 +173,17 @@ class ReceptionController extends Controller
     public function store(Request $request)
     {
         try {
+            $sig_img=null;
+            if($request->hasfile('signature_image'))
+            {
+          
+                $file = $request->file('signature_image');
+                $extention = $file->getClientOriginalExtension();
+                $filename = 'signature'.time().'.'.$extention;
+                $file->move('signatures/', $filename);
+                $sig_img=$filename;
+            }
+          
             // Validate form data
             $validatedData = $request->validate([
                 'project' => 'required|string',
@@ -185,7 +196,7 @@ class ReceptionController extends Controller
                 'signature_performer' => 'required|string',
                 'signature_witness' => 'nullable|string',
                 'signature_reviewer' => 'nullable|string',
-                'signature_image' => 'nullable|string',
+               
                 'missing_parts' => 'nullable|string',
                 'unmounted_parts' => 'nullable|string',
                 'items' => 'required|array'
@@ -203,7 +214,7 @@ class ReceptionController extends Controller
                 'signature_performer' => $validatedData['signature_performer'],
                 'signature_witness' => $validatedData['signature_witness'],
                 'signature_reviewer' => $validatedData['signature_reviewer'],
-                'signature_image' => $validatedData['signature_image'],
+                'signature_image' =>$sig_img,
                 'missing_parts' => $validatedData['missing_parts'],
                 'unmounted_parts' => $validatedData['unmounted_parts'],
                 'submitted_at' => now(),
@@ -250,7 +261,7 @@ class ReceptionController extends Controller
                  'unmounted_parts' => $form->unmounted_parts,
                  'result_summary' => '',
                  'signature_performer' => $form->signature_performer,
-                 'signature_image' => $form->signature_image ? base64_encode(Storage::get('public/' . $form->signature_image)) : null,
+                 'signature_image' => $sig_img,
                  'signature_witness' => $form->signature_witness,
                  'signature_reviewer' => $form->signature_reviewer
              ];

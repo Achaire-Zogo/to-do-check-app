@@ -50,11 +50,34 @@
             background-color: #E31126FF;
             font-weight: bold;
         }
+        .signature-image {
+    width: 120px; /* Set your desired width */
+    height: 35px; /* Maintain the aspect ratio */
+    border: 1px solid #ddd; /* Optional: Add a border */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+}
+        .commentTd {
+ 
+            font-size: 12px; 
+  }
+  td {
+    word-wrap: break-word; /* Ensures text breaks to fit in the cell */
+    word-break: break-word; /* Fallback for some older browsers */
+    white-space: normal;  
+   
+   
+  }
         .signature-section {
             margin-top: 30px;
         }
         .signature-row {
             margin-bottom: 20px;
+        }
+        .logo {
+            max-width: 150px;
+            margin: 0 auto;
+            display: block;
         }
         .signature-box {
             border-bottom: 1px solid #000;
@@ -73,7 +96,10 @@
 </head>
 <body>
     <div class="header">
-        <img src="{{ public_path('images/mikron-logo.png') }}" alt="Mikron">
+    
+        <img src="{{ public_path('images/logo.png') }}" width="120px" height="80px" alt="Company Logo" class="logo">
+
+
         <div class="header-right">
             <div>DP 07.3-12e</div>
             <div>V1.0</div>
@@ -127,8 +153,11 @@
                 <div class="checklist-item">
                     <table>
                         <tr>
-                            <td width="70%">: {{ $item['description'] }}</td>
-                            <td class="{{ $item['status'] === 'ok' ? 'status-ok' : 'status-nok' }}">
+                            <td width="48%">: {{ $item['description'] }}</td>
+                            
+                            <td width="45%" class="commentTd">@if ($item['comment']!=null) {{ $item['comment'] }} @endif</td>
+                           
+                            <td width="7%" class="{{ $item['status'] === 'ok' ? 'status-ok' : 'status-nok' }}">
                                 {{ $item['status'] }}
                             </td>
                         </tr>
@@ -146,10 +175,13 @@
                 <div class="checklist-item">
                     <table>
                         <tr>
-                            <td width="70%">: {{ $item['description'] }}</td>
-                            <td class="{{ $item['status'] === 'ok' ? 'status-ok' : 'status-nok' }}">
+                            <td width="48%">: {{ $item['description'] }}</td>
+                            <td width="45%" class="commentTd">@if ($item['comment']!=null) {{ $item['comment'] }} @endif</td>
+
+                            <td width="7%" class="{{ $item['status'] === 'ok' ? 'status-ok' : 'status-nok' }}">
                                 {{ $item['status'] }}
                             </td>
+                          
                         </tr>
                     </table>
                 </div>
@@ -164,8 +196,10 @@
                 <div class="checklist-item">
                     <table>
                         <tr>
-                            <td width="70%">: {{ $item['description'] }}</td>
-                            <td class="{{ $item['status'] === 'ok' ? 'status-ok' : 'status-nok' }}">
+                            <td width="48%">: {{ $item['description'] }}</td>
+                            <td width="45%" class="commentTd">@if ($item['comment']!=null) {{ $item['comment'] }} @endif</td>
+
+                            <td width="7%" class="{{ $item['status'] === 'ok' ? 'status-ok' : 'status-nok' }}">
                                 {{ $item['status'] }}
                             </td>
                         </tr>
@@ -182,8 +216,10 @@
                 <div class="checklist-item">
                     <table>
                         <tr>
-                            <td width="70%">: {{ $item['description'] }}</td>
-                            <td class="{{ $item['status'] === 'ok' ? 'status-ok' : 'status-nok' }}">
+                            <td width="48%">: {{ $item['description'] }}</td>
+                            <td width="45%" class="commentTd">@if ($item['comment']!=null) {{ $item['comment'] }} @endif</td>
+
+                            <td width="7%" class="{{ $item['status'] === 'ok' ? 'status-ok' : 'status-nok' }}">
                                 {{ $item['status'] }}
                             </td>
                         </tr>
@@ -200,8 +236,11 @@
                 <div class="checklist-item">
                     <table>
                         <tr>
-                            <td width="70%">: {{ $item['description'] }}</td>
-                            <td class="{{ $item['status'] === 'ok' ? 'status-ok' : 'status-nok' }}">
+                            <td width="48%">: {{ $item['description'] }}</td>
+                         
+                            <td width="45%" class="commentTd">@if ($item['comment']!=null) {{ $item['comment'] }} @endif</td>
+
+                            <td width="7%" class="{{ $item['status'] === 'ok' ? 'status-ok' : 'status-nok' }}">
                                 {{ $item['status'] }}
                             </td>
                         </tr>
@@ -235,7 +274,8 @@
                 <td>Signature:</td>
                 <td>
                     @if($data['signature_image'])
-                        <img src="data:image/png;base64,{{ $data['signature_image'] }}" style="max-height: 50px;">
+                    <img src="{{ public_path('signatures/' . $data['signature_image']) }}"  class="signature-image">
+
                     @endif
                 </td>
                 <td>Date {{ $data['submitted_at'] }}</td>

@@ -54,11 +54,12 @@
 
             <h1 class="mb-8 text-2xl font-bold text-center">{{ $title }}</h1>
 
-            <form id="reception-form">
+            <form id="reception-form" enctype="multipart/form-data">
                 <!-- Informations du projet -->
                 <div class="grid grid-cols-1 gap-6 mb-8 md:grid-cols-2">
                     <div class="space-y-4">
                         <div class="flex items-center space-x-2">
+                            
                             <label class="w-40 font-semibold">Projet:</label>
                             <input type="text" name="project" class="flex-1 p-2 rounded border" required>
                         </div>
@@ -167,18 +168,9 @@
                         <label class="block mb-2 font-semibold">Performed by:</label>
                         <input type="text" name="signature_performer" class="p-2 mb-2 w-full rounded border" required>
                         <div class="p-4 text-center rounded-lg border-2 border-gray-300 border-dashed">
-                            <input type="file"
-                                id="signature-input"
-                                accept="image/*"
-                                class="hidden">
-                            <button type="button"
-                                id="upload-signature"
-                                class="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600">
-                                Ajouter une signature
-                            </button>
-                            <img id="signature-preview"
-                                class="hidden mx-auto mt-2 max-h-32">
-                            <input type="hidden" name="signature_image" id="signature-data">
+                            <label>Image de votre signature</label>
+              
+                <input type="file"  class="form-control" name="signature_image">
                         </div>
                     </div>
                     <div>
@@ -210,12 +202,12 @@
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
-
+    
             // Gestion du téléchargement de la signature
             $('#upload-signature').click(function() {
                 $('#signature-input').click();
             });
-
+    
             $('#signature-input').change(function(e) {
                 const file = e.target.files[0];
                 if (file) {
@@ -229,47 +221,24 @@
                     reader.readAsDataURL(file);
                 }
             });
-
+    
             // Soumission du formulaire
             $('#reception-form').submit(function(e) {
                 e.preventDefault();
-
+    
                 // Afficher le loader
                 $('#loader').show();
-
+    
                 // Récupération des données du formulaire
-                const formData = new FormData(this);
-
-                // Conversion des données en objet pour l'envoi
-                const jsonData = {};
-                const items = [];
-
-                formData.forEach((value, key) => {
-                    if (key.startsWith('items[')) {
-                        const matches = key.match(/items\[(\d+)_(\d+)\]\[(\w+)\]/);
-                        if (matches) {
-                            const [_, categoryIndex, itemIndex, field] = matches;
-                            const itemKey = `${categoryIndex}_${itemIndex}`;
-
-                            if (!items[itemKey]) {
-                                items[itemKey] = {};
-                            }
-                            items[itemKey][field] = value;
-                        }
-                    } else {
-                        jsonData[key] = value;
-                    }
-                });
-
-                // Nettoyage et formatage des items
-                jsonData.items = Object.values(items);
-
-                // Envoi des données
+                const formData = new FormData(this); // Use FormData directly on the form
+    
+                // Envoi des données via AJAX
                 $.ajax({
                     url: '/reception/store',
                     method: 'POST',
-                    data: JSON.stringify(jsonData),
-                    contentType: 'application/json',
+                    data: formData, // Send FormData directly
+                    processData: false, // Prevent jQuery from processing the data
+                    contentType: false, // Let the browser set the Content-Type header automatically
                     success: function(response) {
                         // Cacher le loader
                         $('#loader').hide();
@@ -285,5 +254,6 @@
             });
         });
     </script>
+    
 </body>
 </html>
