@@ -2,47 +2,44 @@
 
 namespace App\Http\Controllers;
 use App\Models\ChecklistItem;
+use Barryvdh\DomPDF\Facade\Pdf;
 use App\Mail\ChecklistReport;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Carbon\Carbon;
-use PDF;
 use Dompdf\Dompdf;
 
 class ChecklistController extends Controller
 {
+    protected $vis_control_ar = [
+        [
+            'category' => 'Controle visuel des armoires',
+            'name' => 'Armoire A1',
+            'description' => 'Vérification visuelle de l\'armoire A1',
+            'is_present' => true, // Default to "présent"
+        ],
+        [
+            'category' => 'Controle visuel des armoires',
+            'name' => 'Armoire A2',
+            'description' => 'Vérification visuelle de l\'armoire A2',
+            'is_present' => true, // Default to "présent"
+        ],
+        [
+            'category' => 'Controle visuel des armoires',
+            'name' => 'Armoire A3',
+            'description' => 'Vérification visuelle de l\'armoire A3',
+            'is_present' => true, // Default to "présent"
+        ],
+        [
+            'category' => 'Controle visuel des armoires',
+            'name' => 'Armoire A4 (Optionnelle)',
+            'description' => 'Vérification visuelle de l\'armoire A4',
+            'is_present' => false, // Default to "non présent"
+        ],
+    ];
+
     public function index()
     {
-        $vis_control_ar= [
-            [
-                'category' => 'Controle visuel des armoires',
-                'name' => 'Armoire A1',
-                'description' => 'Vérification visuelle de l\'armoire A1',
-                'is_present' => true, // Default to "présent"
-               
-            ],
-            [
-                'category' => 'Controle visuel des armoires',
-                'name' => 'Armoire A2',
-                'description' => 'Vérification visuelle de l\'armoire A2',
-                'is_present' => true, // Default to "présent"
-              
-            ],
-            [
-                'category' => 'Controle visuel des armoires',
-                'name' => 'Armoire A3',
-                'description' => 'Vérification visuelle de l\'armoire A3',
-                'is_present' => true, // Default to "présent"
-              
-            ],
-            [
-                'category' => 'Controle visuel des armoires',
-                'name' => 'Armoire A4 (Optionnelle)',
-                'description' => 'Vérification visuelle de l\'armoire A4',
-                'is_present' => false, // Default to "non présent"
-              
-            ],
-        ];
         $items = [
            
             // Composants Électriques
@@ -222,10 +219,55 @@ class ChecklistController extends Controller
             ]
         ];
 
-        return view('checklist', ['items' => $items, 'vis_control_ar'=>$vis_control_ar]);
+        return view('checklist', ['items' => $items, 'vis_control_ar'=>$this->vis_control_ar]);
     }
 
     public function store(Request $request)
+    {
+        $validated = $request->validate([
+            'project' => 'required|string',
+            'check_date' => 'required|date',
+            'stamp_number' => 'required|string',
+            'report_email' => 'required|email',
+            'signature_performer' => 'required|string',
+            'signature_witness' => 'nullable|string',
+            'signature_reviewer' => 'nullable|string',
+        ]);
+
+        // Process the form data
+        $checklistData = [
+            'project' => $request->project,
+            'check_date' => $request->check_date,
+            'stamp_number' => $request->stamp_number,
+            'items' => [],
+        ];
+
+        // Process armoire items
+        foreach ($this->vis_control_ar as $index => $item) {
+            $checklistData['items'][] = [
+                'name' => $item['name'],
+                'status' => $request->input("status_${index}"),
+                'comment' => $request->input("comment_${index}"),
+            ];
+        }
+
+        // Generate PDF
+        $pdf = PDF::loadView('checklist.pdf', [
+            'data' => $checklistData,
+            'signature_performer' => $request->signature_performer,
+            'signature_witness' => $request->signature_witness,
+            'signature_reviewer' => $request->signature_reviewer,
+        ]);
+
+        // Send email with PDF attachment
+        Mail::to($request->report_email)
+            ->send(new ChecklistReport($pdf->output(), $checklistData));
+
+        return redirect()->route('checklist.index')
+            ->with('success', 'Checklist submitted successfully and sent by email.');
+    }
+
+    public function store2(Request $request)
     {
         $validatedData = $request->validate([
             'user_name' => 'required|string|max:255',

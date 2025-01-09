@@ -1,4 +1,5 @@
 #### HOW TO RUN THE APP
+
 1. Clone the repository from Heroku CLI
 2. Install all the necessary packages by: $ composer install or $ composer update 
 3. Create the .env file by typing the command:$ cp .env.example .env
