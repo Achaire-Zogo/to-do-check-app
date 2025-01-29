@@ -1,13 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\ChecklistItem;
-use App\Mail\ChecklistReport;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
 use Carbon\Carbon;
-use PDF;
 use Dompdf\Dompdf;
+// use Barryvdh\DomPDF\PDF;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Http\Request;
+use App\Mail\ChecklistReport;
+use App\Models\ChecklistItem;
+use Illuminate\Support\Facades\Mail;
 
 class ChecklistController extends Controller
 {
@@ -19,32 +20,32 @@ class ChecklistController extends Controller
                 'name' => 'Armoire A1',
                 'description' => 'Vérification visuelle de l\'armoire A1',
                 'is_present' => true, // Default to "présent"
-               
+
             ],
             [
                 'category' => 'Controle visuel des armoires',
                 'name' => 'Armoire A2',
                 'description' => 'Vérification visuelle de l\'armoire A2',
                 'is_present' => true, // Default to "présent"
-              
+
             ],
             [
                 'category' => 'Controle visuel des armoires',
                 'name' => 'Armoire A3',
                 'description' => 'Vérification visuelle de l\'armoire A3',
                 'is_present' => true, // Default to "présent"
-              
+
             ],
             [
                 'category' => 'Controle visuel des armoires',
                 'name' => 'Armoire A4 (Optionnelle)',
                 'description' => 'Vérification visuelle de l\'armoire A4',
                 'is_present' => false, // Default to "non présent"
-              
+
             ],
         ];
         $items = [
-           
+
             // Composants Électriques
             [
                 'category' => 'Composants Électriques',
@@ -287,24 +288,24 @@ class ChecklistController extends Controller
                 'recipient_email' => $request->recipient_email,
             ]);
         }
-$commentAr=($request->commentAr);
-$pdf = PDF::loadView('emails.checklist-report', [
-    'userName' => $reportData['userName'],
-    'date' => $reportData['date'],
-    'machineName' => $request->machineName,
-    'totalItems' => $reportData['totalItems'],
-    'presentItems' => $reportData['presentItems'],
-    'missingItems' => $reportData['missingItems'],
-    'itemsWithComments' => $reportData['itemsWithComments'],
-    'categorizedItems' => $reportData['categorizedItems'],
-    'commentAr' => $commentAr
-]);
+        $commentAr=($request->commentAr);
+        $pdf = Pdf::loadView('emails.checklist-report', [
+            'userName' => $reportData['userName'],
+            'date' => $reportData['date'],
+            'machineName' => $request->machineName,
+            'totalItems' => $reportData['totalItems'],
+            'presentItems' => $reportData['presentItems'],
+            'missingItems' => $reportData['missingItems'],
+            'itemsWithComments' => $reportData['itemsWithComments'],
+            'categorizedItems' => $reportData['categorizedItems'],
+            'commentAr' => $commentAr
+        ]);
 
-// Save the PDF to a file (optional)
-$pdfPath = storage_path('app/public/checklist_report.pdf');
-$pdf->save($pdfPath);
-Mail::to($request->recipient_email)
-->send(new ChecklistReport($reportData,$commentAr, $pdfPath));
+    // Save the PDF to a file (optional)
+    $pdfPath = storage_path('app/public/checklist_report.pdf');
+    $pdf->save($pdfPath);
+    Mail::to($request->recipient_email)
+    ->send(new ChecklistReport($reportData,$commentAr, $pdfPath));
         // Envoi du rapport par email
      /*   Mail::to($request->recipient_email)
             ->send(new ChecklistReport($reportData,$commentAr));*/
